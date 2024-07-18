@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Brifers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/slickSlider.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="functionJS/sliderHeader.js" defer></script>
+  <script src="functionJS/animationSlide.js" defer></script>
+  <script src="functionJS/countNumber.js" defer></script>
+  <script src="functionJS/slickSLider.js" defer></script>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.11.0.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+</head>
+  <body onload="onPageLoading()">
+    <div class="wrapper">
+      <div class="shadowElement"></div>
+      <div class="header__top">
+        <div class="header__top-left">
+          <div class="header__top-left-address">
+            <i class="fa-solid fa-location-dot" style="color: #D38E25;"></i>
+            <p>301 Commerce Street Suite 2040</p>
+          </div>
+          <div class="header__top-left-phone">
+            <i class="fa-solid fa-phone" style="color: #D38E25;"></i>
+            <p>(888) 123 - 4567</p>
+          </div>
+          <div class="header__top-left-mail">
+            <i class="fa-solid fa-envelope" style="color: #D38E25;"></i>
+            <p>Brifers@gmail.com</p>
+          </div>
+        </div>
+        <div class="header__top-right">
+          <div class="header__top-right-socials">
+            <div><a href="https://fb.com"><i class="fa-brands fa-facebook"></i></a></div>
+            <div><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></div>
+            <div><a href="https://skype.com"><i class="fa-brands fa-skype"></i></a></div>
+            <div><a href="https://google.com"><i class="fa-brands fa-google-plus-g"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-header">
+        <div class="header">
+          <div class="header__bot">
+            <div class="header__bot-logo">
+              <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="header__bot-list">
+              <div class="header__bot-list-item">
+                <ul>Home 
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div>
+                    <li>Home Main</li>
+                    <li>Home Consulting</li>
+                    <li id="n">Home Business</li>
+                  </div>
+                </ul>
+              </div>
+              <div class="header__bot-list-item">
+                <ul>Pages 
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div>
+                    <li>About Company</li>
+                    <li>
+                      <ul>
+                        Our Team
+                        <i class="fa-solid fa-angle-right"></i>
+                        <li class="n1" id="keke">Team Detail</li>
+                      </ul>
+                    </li>
+                    <li>Pricing Table</li>
+                    <li>History Company</li>
+                    <li>Testimonials</li>
+                    <li>
+                      <ul>
+                        Shop
+                        <i class="fa-solid fa-angle-right"></i>
+                        <li class="n1" id="keke">Shop Detail</li>
+                        <li class="n1" id="keke">Wishlist</li>
+                        <li class="n1" id="keke">Checkout</li>
+                      </ul>
+                    </li>
+                    <li>Our Gallery</li>
+                    <li>Coming Soon</li>
+                    <li class="n1">404 Not Found</li>
+                  </div>
+                </ul>
+              </div>
+              <div class="header__bot-list-item">
+                <ul>Services
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div>
+                    <li>Our Services</li>
+                    <li class="n1">Single Service</li>
+                  </div>
+                </ul>
+              </div>
+              <div class="header__bot-list-item">
+                <ul>Case Studies
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div>
+                    <li>Standard Study</li>
+                    <li>Modern Study</li>
+                    <li>List Case</li>
+                    <li class="n1">Single Case</li>
+                  </div>
+                </ul>
+              </div>
+              <div class="header__bot-list-item"">
+                <ul>BLog
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div>
+                    <li>List Blog</li>
+                    <li>Blog Sidebar</li>
+                    <li class="n1">Single Blog</li>
+                  </div>
+                </ul>
+              </div>
+              <div class="header__bot-list-item">
+                <ul>Contact
+                  <i class="fa-solid fa-chevron-down"></i>
+                  <div>
+                    <li>Contact Us</li>
+                    <li class="n1">Help & FAQs</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="header__bot-items">
+              <div class="header__bot-items-search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+              </div>
+              <div class="header__bot-items-free">
+                <a href="#">free consulting</a>
+              </div>
+              <div class="header__bot-items-menu">
+                <div class="header__bot-items-menu-line1"></div>
+                <div class="header__bot-items-menu-line2"></div>
+                <div class="header__bot-items-menu-line3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider"> 
+        <!-- class slider: bao gồm cả background và header -->
+            <div class="swiper-container">
+              <div class="swiper-wrapperr">
+                <div class="swiper-slide">
+                  <div class="bg-wrapper">
+                    <img id="img1" class="slide-img active" src="images/slide1.png" alt="Slide 1">
+                    <img id="img2" class="slide-img" src="images/slide2.png" alt="Slide 2">
+                    <img id="img3" class="slide-img" src="images/slide3.png" alt="Slide 3">
+                    <div class="slide-content">
+                      <div class="clicky" id="moveBack" class="animate"><img style="width: 16px; height: 25px; user-select: none;" src="images/leftArrow.svg" alt="leftArrow"></div>
+                      <div class="clicky" id="moveOn" class="animate"><img style="width: 16px; height: 25px; user-select: none;" src="images/rightArrow.svg" alt="rightArrow"></div>
+                    </div>
+                    <div class="slide-title">
+                      <div class="slide-title__text">
+                        <div class="slide-title__text-quote" id="quote" class="animate">
+                          <p>bright solutions. profitable results.</p>
+                        </div>
+                        <div class="slide-title__text-heading" id="heading" class="animate">
+                          <h1>servie you can count on</h1>
+                          <h1>experience you can trust.</h1>
+                        </div>
+                        <div class="slide-title__text-describe" id="describe" class="animate">
+                          <p>At the end of the day, if you're wasting your time by not investing in your self, you're going</p>
+                          <p>to waste away and that would be the greatest waste of all.</p>
+                        </div>
+                      </div>
+                      <div class="slide-title__btn">
+                        <div class="slide-title__btn-btn1" class="animate">
+                          <a href="https://www.facebook.com/" style="text-decoration: none;">
+                            <button type="button" style=" cursor: pointer;"><p style="position: relative; z-index: 1; font-family: 'font3';">OUR SERVICE</p>
+                              <div class="slide-title__btn-btn1--icons">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-angle-right"></i>
+                              </div>
+                            </button>
+                          </a>
+                        </div>
+                        <div class="slide-title__btn-btn2" class="animate">
+                          <a href="https://www.facebook.com/">
+                            <button type="button" style=" cursor: pointer;"><p style="position: relative; z-index: 1;">GET A QUOTE</p></button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="services">
+          <div class="services__item1">
+            <div class="services__item1-top">
+              <div class="services__item1-top--left">
+                <img style="width: 50px; margin-left: 8px;" src="images/serviceItem1.png" alt="service1">
+              </div>
+              <div class="services__item1-top--right">
+                <h4 style="font-family: 'font2';">Financial Consultancy</h4>
+              </div>
+            </div>
+            <div class="services__item1-bot">
+              <div class="services__item1-bot--paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, vitae debitis deserunt
+                   molestiae voluptatem dolorem, porro aliquam nisi</p>
+              </div>
+              <div class="services__item1-bot--items">
+                <ul>
+                  <li>Great Solution for Growth</li>
+                  <li>Make a Detailed Plan</li>
+                  <li>Sustainable Step By Step</li>
+                </ul>
+              </div>
+              <div class="services__item1-bot--nav">
+                <a href="https://soundcloud.com/linh-tran-8699177/y2mate-com-nh-c-nghe-tr-n-xe-1">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item2">
+            <div class="services__item2-top">
+              <div class="services__item2-top--left">
+                <img style="width: 50px; margin-left: 8px;" src="images/serviceItem2.png" alt="service2">
+              </div>
+              <div class="services__item2-top--right">
+                <h4 style="font-family: 'font2';">Solicitory Consultancy</h4>
+              </div>
+            </div>
+            <div class="services__item2-bot">
+              <div class="services__item2-bot--paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, vitae debitis deserunt
+                   molestiae voluptatem dolorem, porro aliquam nisi</p>
+              </div>
+              <div class="services__item2-bot--items">
+                <ul>
+                  <li>Business Innovation</li>
+                  <li>Considerable Development</li>
+                  <li>In-Depth Consulting</li>
+                </ul>
+              </div>
+              <div class="services__item2-bot--nav">
+                <a href="https://soundcloud.com/linh-tran-8699177/y2mate-com-nh-c-nghe-tr-n-xe-1">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item3">
+            <div class="services__item3-top">
+              <div class="services__item3-top--left">
+                <img style="width: 50px; margin-left: 8px;" src="images/serviceItem3.png" alt="service3">
+              </div>
+              <div class="services__item3-top--right">
+                <h4 style="font-family: 'font2';">Organisational</h4>
+              </div>
+            </div>
+            <div class="services__item3-bot">
+              <div class="services__item3-bot--paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, vitae debitis deserunt
+                   molestiae voluptatem dolorem, porro aliquam nisi</p>
+              </div>
+              <div class="services__item3-bot--items">
+                <ul>
+                  <li>Asset Planning</li>
+                  <li>Investment Strategy</li>
+                  <li>Diversification</li>
+                </ul>
+              </div>
+              <div class="services__item3-bot--nav">
+                <a href="https://soundcloud.com/linh-tran-8699177/y2mate-com-nh-c-nghe-tr-n-xe-1">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item4">
+            <div class="services__item4-top">
+              <div class="services__item4-top--left">
+                <img style="width: 50px; margin-left: 8px;" src="images/serviceItem4.png" alt="service4">
+              </div>
+              <div class="services__item4-top--right">
+                <h4 style="font-family: 'font2';">Corporate Finance</h4>
+              </div>
+            </div>
+            <div class="services__item4-bot">
+              <div class="services__item4-bot--paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, vitae debitis deserunt
+                   molestiae voluptatem dolorem, porro aliquam nisi</p>
+              </div>
+              <div class="services__item4-bot--items">
+                <ul>
+                  <li>Best Insurance Agency</li>
+                  <li>Trusted & Experience Insurance</li>
+                  <li>Key Managerial Persons</li>
+                </ul>
+              </div>
+              <div class="services__item4-bot--nav">
+                <a href="https://soundcloud.com/linh-tran-8699177/y2mate-com-nh-c-nghe-tr-n-xe-1">
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="find-service">
+          <p>Find the right service for your business. <span><a href="https://www.facebook.com/nam24082003">View All Services 
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a></span></p>
+        </div>
+        <div class="about">
+          <div class="about__top">
+            <div class="about__top-image">
+              <div class="about__top-image--main">
+                <div class="about__top-image--main---frame"></div>
+                <img src="images/about_img_Main.png" alt="About Image Main">
+              </div>
+              <div class="about__top-image--item">
+                <div class="about__top-image--item---count" id="count1"></div>
+                <p>Year of Experience</p>
+              </div>
+              <div class="about__top-image--play">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+            <div class="about__top-content">
+              <div class="about__top-content--intro">
+                <h4>WE ARE BRIFERS CONSULTING</h4>
+              </div>
+              <div class="about__top-content--heading">
+                <h1>Consulting company with strategy in business high growth.</h1>
+              </div>
+              <div class="about__top-content--text1">
+                <p>Brifers team ensure to provide best advice and products available in the whole market and we are efficient in our services.
+                </p>
+              </div>
+              <div class="about__top-content--text2">
+                <p>We work with our clients to build the capabilities that enable 
+                  organizationsto achieve sustainable advantage. We are shaping the 
+                  future together.Nulla in semper turpis. Aenean facilisis magna 
+                  non urna dapibus,nec imperdiet lacus commodo. Fusce quis tristique
+                  libero, quis sollicitudin ante.
+                </p>
+              </div>
+              <div class="about__top-content--btn">
+                <a href="#" style="text-decoration: none;">
+                  <div class="buttonShort" style="font-family: 'font3'; font-size: 13px; user-select: none;"><span>REAd MORE</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="about__bot">
+            <div class="about__bot-item1">
+              <div class="about__bot-item1--number" id="count01">40</div>
+              <div class="about__bot-item1--number_text">Client Success</div>
+            </div>
+            <div class="about__bot-item2">
+              <div class="about__bot-item2--number" id="count02">190</div>
+              <div class="about__bot-item2--number_text">Businesses Advised</div>
+            </div>
+            <div class="about__bot-item3">
+              <div class="about__bot-item3--number" id="count03">520</div>
+              <div class="about__bot-item3--number_text">Guides Given</div>
+            </div>
+            <div class="about__bot-item4">
+              <div class="about__bot-item4--number" id="count04">10</div>
+              <div class="about__bot-item4--number_text">Awards Achieved</div>
+            </div> 
+          </div>
+        </div>
+        <div class="background">
+          <div class="background__why">
+            <img src="images/bgWhyUs.png" alt="Why Us?">
+            <div class="background__why-title">
+              <div class="background__why-title--title1">WHY CHOOSE US</div>
+              <div class="background__why-title--title2">Perfect Choice For Your Business</div>
+              <div class="background__why-title--title3">Our aim is to change people’s lives and improve businesses with our progressive and innovative technology solutions.</div>
+            </div>
+            <div class="background__why-items">
+              <div class="background__why-items_imageItem">
+                <div class="background__why-items_imageItem--image">
+                  <img src="images/whyItem1.png" alt="">
+                </div>
+                <h3 class="title">30 Prestigious Awards</h3>
+                <p class="paraItem">He prestigious award is recognized by everyone. those who have succeeded in cooperating with us.</p>
+              </div>
+              <div class="background__why-items_imageItem">
+                <div class="background__why-items_imageItem--image">
+                  <img src="images/whyItem2.png" alt="">
+                </div>
+                <h3 class="title">30 Prestigious Awards</h3>
+                <p class="paraItem">Our professionally trained consulting team will accompany you when you succeed. Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="background__why-items_imageItem">
+                <div class="background__why-items_imageItem--image">
+                  <img src="images/whyItem3.png" alt="">
+                </div>
+                <h3 class="title">30 Prestigious Awards</h3>
+                <p class="paraItem">We support 24/7 advice. You can contact us anytime we will help you. Sed commodo eleifend magna.</p>
+              </div>
+              <div class="background__why-items_imageItem">
+                <div class="background__why-items_imageItem--image">
+                  <img src="images/whyItem4.png" alt="">
+                </div>
+                <h3 class="title">30 Prestigious Awards</h3>
+                <p class="paraItem">We assure you when working with us you will achieve what you want. The challenges it presents may seem daunting</p>
+              </div>
+              <div class="background__why-items_imageItem">
+                <div class="background__why-items_imageItem--image">
+                  <img src="images/whyItem5.png" alt="">
+                </div>
+                <h3 class="title">30 Prestigious Awards</h3>
+                <p class="paraItem">Contact us because Working with us you will get an affordable price with good quality, that's great isn't it?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section1">
+        </div>
+        <div class="projects"></div>
+        <div class="list-projects"></div>
+        <div class="pricing"></div>
+        <div class="slide-testimonials"></div>
+        <div class="partners"></div>
+        <div class="section2"></div>
+        <div class="section3"></div>
+        <div class="blog"></div>
+        <div class="map"></div>
+      </div>
+      <div class="footer">
+        <div class="footer-top"></div>
+        <div class="footer-center"></div>
+        <div class="footer-bot"></div>
+      </div>
+    </div>
+  </body>
+  </html>

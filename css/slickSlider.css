@@ -1,0 +1,31 @@
+.slick-dots {
+  display: flex!important;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  gap: 0 20px;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 25px;
+  background-color: #5B646B;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 4px;
+}
+.slick-dots button:hover {
+  width: 45px;
+  transition: all 0.25s linear;
+}
+.slick-dots .slick button {
+  opacity: 0;
+}
+.slick-dots .slick-active button {
+  background-color: #d38e25;
+  width: 45px;
+  opacity: 1;
+}

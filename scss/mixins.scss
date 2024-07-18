@@ -1,0 +1,29 @@
+@mixin buttonShort {
+  background-color: #D38E25;
+  width: 145px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.4rem;
+  border: 0;
+  border-bottom: 4px solid #A16915;
+  padding: 0 30px;
+  text-transform: uppercase;
+  @include flexBox();
+}
+@mixin buttonLong {
+  background-color: $primay-color;
+  width: 213px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.5rem;
+  border: 0;
+  border-bottom: 0.4rem solid #A16915;
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
+}
+@mixin flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
