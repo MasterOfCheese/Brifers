@@ -80,6 +80,7 @@ i.fa-solid.fa-chevron-down {
 
 .wrapper {
   width: 100%;
+  display: none;
 }
 
 .shadowElement {
@@ -1185,11 +1186,11 @@ i.fa-solid.fa-chevron-down {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none !important;
 }
 .main .background__why-items_imageItem {
   height: min-content;
   margin-bottom: 50px;
-  transition: all 0.25s linear !important;
 }
 .main .background__why-items_imageItem--image {
   width: 100%;

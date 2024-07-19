@@ -1007,7 +1007,7 @@ i.fa-solid.fa-chevron-down {
       &::after {
         position: absolute;
         content: "";
-        top: 94.6%;
+        top: 94.7%;
         right: 0;
         width: 40px;
         height: 40px;
@@ -1071,14 +1071,16 @@ i.fa-solid.fa-chevron-down {
       &-items {
         position: absolute;
         top: 45%;
-        width: 80%;
+        width: 78%;
         display: flex;
         justify-content: center;
         align-items: center;
         &_imageItem {
-          height: min-content;
+          height: 260px;
           margin-bottom: 50px;
-          transition: all 0.25s linear!important;
+          position: relative;
+          @include flexBox();
+          flex-direction: column;
           &--image {
             width: 100%;
             display: flex;
@@ -1095,6 +1097,7 @@ i.fa-solid.fa-chevron-down {
             font-family: 'font3';
             font-size: 20px;
             margin-top: 25px;
+            font-weight: 600;
           }
           p.paraItem {
             display: flex;
@@ -1103,9 +1106,9 @@ i.fa-solid.fa-chevron-down {
             text-align: center;
             margin: 0 auto;
             color: #eee;
-            font-family: 'font1';
+            font-family: 'font2';
             font-size: 15px;
-            margin-top: 20px;
+            margin-top: 10px;
           }
         }
       }
