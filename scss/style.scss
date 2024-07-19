@@ -862,31 +862,9 @@ i.fa-solid.fa-chevron-down {
         height: min-content;
         transform: translateY(60px);
         &--btn {
-          position: relative;
-          width: 145px;
-          z-index: 1;
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 0;
-            background-color: $background-color;
-            transition: height 0.4s ease-in-out;
-            cursor: pointer;
-          }
-          &:hover::after {
-            height: 50px;
-            color: #fff;
-            width: 100%;
-            z-index: 0; 
-          }
+          @include classButtonShort();
           span {
-            position: relative;
-            z-index: 2;
-            font-family: 'work sans bold';
-            letter-spacing: 0.7px;
+            @include spanButtonShort();
           }
         }
         &--intro h4 {
@@ -1110,6 +1088,30 @@ i.fa-solid.fa-chevron-down {
             font-size: 15px;
             margin-top: 10px;
           }
+        }
+      }
+    }
+  }
+  .section1 {
+    &__main {
+      &-image {
+        img#mainImageSection1 {
+          max-width: 541px;
+          max-height: 634px;
+        }
+        &--item {
+          img#itemImageSection1  {
+            max-width: 300px;
+            max-height: 350px;
+          }
+        }
+      }
+    }
+    &__title {
+      &-button {
+        @include classButtonShort();
+        span {
+          @include spanButtonShort();
         }
       }
     }
