@@ -15,7 +15,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  height: 4px;
+  height: 4.5px;
 }
 .slick-dots button:hover {
   width: 45px;
@@ -28,4 +28,35 @@
   background-color: #d38e25;
   width: 45px;
   opacity: 1;
+}
+.slick-initialized .slick-slide img {
+  transition: all 0.3s linear;
+}
+.slick-initialized .slick-slide:hover img {
+  transform: rotate3d(0, 1, 0, 360deg);
+  filter:drop-shadow(12px 10px 0 rgba(0, 0, 0, 0.38));
+}
+div#slick-slide03 img, div#slick-slide04 img {
+  width: 60px;
+}
+div#slick-slide00, div#slick-slide01, div#slick-slide02, div#slick-slide03, div#slick-slide04 {
+  border-right: 1px solid #2C3841;
+}
+div#slick-slide00::after, div#slick-slide01::after, div#slick-slide02::after, div#slick-slide03::after, div#slick-slide04::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top:0;
+  right: -0.8%;
+  background-color: #d38e25;
+}
+div#slick-slide00::before, div#slick-slide01::before, div#slick-slide02::before, div#slick-slide03::before, div#slick-slide04::before  {
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  bottom:0;
+  right: -0.8%;
+  background-color: #d38e25;
 }
