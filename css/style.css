@@ -1213,7 +1213,7 @@ i.fa-solid.fa-chevron-down {
 .main .background__why-items_imageItem h3.title {
   display: flex;
   justify-content: center;
-  color: #eee;
+  color: #ffffff;
   font-family: "font3";
   font-size: 20px;
   margin-top: 25px;
@@ -1297,6 +1297,7 @@ i.fa-solid.fa-chevron-down {
   letter-spacing: 0.5px;
   height: 100px;
   margin-left: 9.83em;
+  border-left: 5px solid #d38e25;
 }
 .main .section1__title {
   width: min-content;
@@ -1396,6 +1397,116 @@ i.fa-solid.fa-chevron-down {
   z-index: 2;
   font-family: "work sans bold";
   letter-spacing: 0.7px;
+}
+.main .projects {
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  gap: 2em;
+  margin-bottom: 120px;
+}
+.main .projects__pro1, .main .projects__pro2, .main .projects__pro3 {
+  max-width: 370px;
+  max-height: 315px;
+  position: relative;
+  overflow: hidden;
+}
+.main .projects__pro1 img#scale1, .main .projects__pro1 img#scale2, .main .projects__pro1 img#scale3, .main .projects__pro2 img#scale1, .main .projects__pro2 img#scale2, .main .projects__pro2 img#scale3, .main .projects__pro3 img#scale1, .main .projects__pro3 img#scale2, .main .projects__pro3 img#scale3 {
+  filter: brightness(0.5);
+}
+.main .projects__pro1-item, .main .projects__pro2-item, .main .projects__pro3-item {
+  max-width: 70px;
+  max-height: 66px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 42%;
+  transition: all 0.35s;
+  pointer-events: none;
+}
+.main .projects__pro1-item h2, .main .projects__pro2-item h2, .main .projects__pro3-item h2 {
+  width: max-content;
+  font-size: 30px;
+  color: #eee;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "work sans bold";
+  top: -5px;
+}
+.main .projects__pro1-item img, .main .projects__pro2-item img, .main .projects__pro3-item img {
+  width: 60px;
+  transform: translateY(-20px);
+}
+.main .projects__pro1 :hover + .projects__pro1-item,
+.main .projects__pro1 :hover + .projects__pro2-item,
+.main .projects__pro1 :hover + .projects__pro3-item, .main .projects__pro2 :hover + .projects__pro1-item,
+.main .projects__pro2 :hover + .projects__pro2-item,
+.main .projects__pro2 :hover + .projects__pro3-item, .main .projects__pro3 :hover + .projects__pro1-item,
+.main .projects__pro3 :hover + .projects__pro2-item,
+.main .projects__pro3 :hover + .projects__pro3-item {
+  transform: translateY(200%);
+  transition: all 0.35s;
+}
+.main .projects__pro1-under, .main .projects__pro2-under, .main .projects__pro3-under {
+  position: relative;
+  pointer-events: none;
+  transform: translateY(100%);
+  width: 100%;
+  text-align: center;
+  font-family: "font1";
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 23px;
+  bottom: 0;
+  transition: all 0.9s linear;
+  height: 110%;
+}
+.main .projects__pro1-under p, .main .projects__pro2-under p, .main .projects__pro3-under p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  padding: 0 3.5em;
+  color: #EBEBEB;
+}
+.main .projects__pro1-under::before, .main .projects__pro2-under::before, .main .projects__pro3-under::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #d38e25;
+  top: 1%;
+  left: 110%;
+  transform: skewX(-135deg) translateX(50%);
+}
+.main .projects__pro1-under::after, .main .projects__pro2-under::after, .main .projects__pro3-under::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background-color: #d38e25;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+.main .projects__pro1:hover .projects__pro1-under, .main .projects__pro1:hover .projects__pro2-under, .main .projects__pro1:hover .projects__pro3-under, .main .projects__pro2:hover .projects__pro1-under, .main .projects__pro2:hover .projects__pro2-under, .main .projects__pro2:hover .projects__pro3-under, .main .projects__pro3:hover .projects__pro1-under, .main .projects__pro3:hover .projects__pro2-under, .main .projects__pro3:hover .projects__pro3-under {
+  transform: translateY(-95%);
+  background-color: #14212B;
+  transition: all 0.5s;
+}
+.main .projects__pro1:hover .projects__pro1-under::before, .main .projects__pro1:hover .projects__pro2-under::before, .main .projects__pro1:hover .projects__pro3-under::before, .main .projects__pro2:hover .projects__pro1-under::before, .main .projects__pro2:hover .projects__pro2-under::before, .main .projects__pro2:hover .projects__pro3-under::before, .main .projects__pro3:hover .projects__pro1-under::before, .main .projects__pro3:hover .projects__pro2-under::before, .main .projects__pro3:hover .projects__pro3-under::before {
+  left: 90%;
+  transition: all 0.8s linear;
+}
+.main .projects__pro1:hover .projects__pro1-under::after, .main .projects__pro1:hover .projects__pro2-under::after, .main .projects__pro1:hover .projects__pro3-under::after, .main .projects__pro2:hover .projects__pro1-under::after, .main .projects__pro2:hover .projects__pro2-under::after, .main .projects__pro2:hover .projects__pro3-under::after, .main .projects__pro3:hover .projects__pro1-under::after, .main .projects__pro3:hover .projects__pro2-under::after, .main .projects__pro3:hover .projects__pro3-under::after {
+  width: 100%;
+  transition: all 0.8s linear;
+}
+.main .projects__pro3-item {
+  top: 49%;
 }
 
 /*# sourceMappingURL=style.css.map */
