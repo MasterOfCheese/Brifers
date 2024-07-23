@@ -864,7 +864,7 @@ i.fa-solid.fa-chevron-down {
         &--btn {
           @include classButtonShort();
           span {
-            @include spanButtonShort();
+            @include spanButton();
           }
         }
         &--intro h4 {
@@ -1237,7 +1237,7 @@ i.fa-solid.fa-chevron-down {
         margin-left: -1%;
         margin-top: 2em;
         span {
-          @include spanButtonShort();
+          @include spanButton();
         }
       }
     }
@@ -1349,5 +1349,65 @@ i.fa-solid.fa-chevron-down {
       }
     }
   }
-  
+  .list-projects {
+    display: flex;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    align-items: center;
+    &__button {
+      @include classButtonLong();
+      span {
+        @include spanButton;
+      }
+    }
+    &__content {
+      &-see {
+        color: $primay-color;
+        font-size: 15px;
+        font-family: 'font1';
+        letter-spacing: 0.1em;
+        font-weight: 600;
+      }
+      &-heading {
+        color: #333;
+        font-size: 40px;
+        font-family: 'work sans bold';
+        letter-spacing: 0.8px;
+        margin-top: 5px;
+      }
+      &-subtitle {
+        font-family: "font1";
+        font-size: 15px;
+        color: $secondary-color;
+        font-weight: 600;
+        width: 64%;
+        letter-spacing: 0.55px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+      }
+      &::after {
+        content: "";
+        width: 90px;
+        height: 3px;
+        background-color: #d38e25;
+        position: absolute;
+        transform: skewX(-45deg);
+        margin: 0 auto;
+        display: flex;
+        left: 19.2%;
+      }
+    }
+  }
+  .background-projects {
+    background-image: url(/images/background_projects.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    margin-left: -30px;
+    padding-top: 845px;
+    z-index: -1;
+    bottom: -8%;
+  }
 }
