@@ -1355,8 +1355,13 @@ i.fa-solid.fa-chevron-down {
     margin: 0 auto;
     padding-bottom: 70px;
     align-items: center;
+    position: relative;
     &__button {
       @include classButtonLong();
+      width: 210px;
+      z-index: 1;
+      height: max-content;
+      right: 0;
       span {
         @include spanButton;
       }
@@ -1408,7 +1413,7 @@ i.fa-solid.fa-chevron-down {
     margin-left: -30px;
     padding-top: 845px;
     z-index: -1;
-    bottom: 5.5%;
+    bottom: 14.5%;
   }
   .carousel {
     margin: 0 -475px 170px;
@@ -1601,4 +1606,637 @@ i.fa-solid.fa-chevron-down {
       }
     }
   }
+  .pricing {
+    max-width: 1170px;
+    margin: 0 auto;
+    @include flexBox();
+    flex-direction: column;
+    padding-bottom: 25px;
+    margin-bottom: 80px;
+    position: relative;
+    &__title {
+      max-width: 660px;
+      @include flexBox();
+      flex-direction: column;
+      span {
+        font-family: 'font1';
+        color: $primay-color;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      h1 {
+        color: #333;
+        font-size: 40px;
+        font-family: 'work sans bold';
+        letter-spacing: 1px;
+      }
+      p {
+        font-family: 'font1';
+        color: $secondary-color;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 26px;
+        text-align: center;
+        margin-bottom: 80px;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 15%;
+          height: 4px;
+          background-color: $primay-color;
+          bottom: -25px;
+          left: 50%;
+          transform: skewX(-45deg) translateX(-50%);
+        }
+      }
+    }
+    &__items {
+      width: 100%;
+      @include flexBox();
+      gap: 30px;
+      position: absolute;
+      top: 172%;
+      margin-top: 10%;
+      &-item1 {
+        position: absolute;
+        left: 0;
+        width: calc((100% - 60px) / 3);
+        border: 1px solid #DEDEDE;
+        &_top {
+          height: 182px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 65px;
+          background-image: url('/images/background_item1.png');
+          &-standart {
+            margin-left: 10%;
+            font-family: 'work sans bold';
+            color: #fff;
+            font-weight: bold;
+            font-size: 17px;
+            text-transform: uppercase;
+            line-height: 26px;
+            letter-spacing: 0.08em;
+            display: flex;
+            gap: 62px;
+            span#specialSpan {
+              position: relative;
+              top: 85%;
+          }
+            &--count {
+              @include flexBox();
+              flex-direction: column;
+              gap: 3px;
+              padding: 25px 15px 12px 15px;
+              position: absolute;
+              right: 12%;
+              top: -15px;
+              background-color: $primay-color;
+              width: 37%;
+              height: 19%;
+              .wrap {
+                display: flex;
+                gap: 5px;
+                width: 108%;
+                span {
+                  font-family: 'font1';
+                  font-size: 25px;
+                  font-weight: normal;
+                }
+                div#hehe {
+                  overflow-y: hidden;
+                  height: 40px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                  position: absolute;
+                  padding-top: 6px;
+                  width: 100%;
+                  left: 6%;
+                  top: 22%;
+                  div#effect {
+                    display: flex;
+                    margin-bottom: 10px;
+                    gap: 2px;
+                    span#effect1 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0s;
+                    }
+                    span#effect2 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.15s;
+                    }
+                    span#effect3 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.3s;
+                    }
+                    span {
+                      font-size: 45px;
+                      font-family: 'font2';
+                      letter-spacing: 0px;
+                      font-weight: bold;
+                    }
+                  }
+                  div#cloneEffect {
+                    display: flex;
+                    margin-bottom: 10px;
+                    gap: 2px;
+                    span#cloneEffect1 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0s;
+                    }
+                    span#cloneEffect2 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.15s;
+                    }
+                    span#cloneEffect3 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.3s;
+                    }
+                    span {
+                      font-size: 45px;
+                      font-family: "font2";
+                      letter-spacing: 0px;
+                      font-weight: bold;
+                    }
+                  }
+              }
+              }
+              div#duration {
+                font-family: 'font3';
+                font-size: 15px;
+                font-weight: normal;
+                letter-spacing: 0px;
+                text-transform: none;
+                margin: 0 auto;
+                @include flexBox();
+                width: 100%;
+                position: relative;
+                top: 12%;
+              }
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 0;
+                height: 0;
+                border-bottom: 15px solid #AE741C;
+                border-right: 12px solid transparent;
+              }
+            }
+          }
+          &-objects {
+            width: max-content;
+            margin: 0 auto;
+            font-family: 'font3';
+            font-size: 16px;
+            color: #ffffff;
+            padding: 15px 33px 10px;
+            background-color: rgba(255, 255, 255, 0.11);
+          }
+        }
+        &_bot {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          padding: 2em 0 2em 2em;
+          gap: 1em;
+          font-size: 17px;
+          &-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            height: 100%;
+          }
+          &-checked--optional {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            p {
+              font-family: 'font2';
+            }
+          }
+        }
+        &:hover {
+          span#effect1, span#effect2, span#effect3 {
+            position: absolute;
+            transform: translateY(-160%);
+          }
+          span#cloneEffect1, span#cloneEffect2, span#cloneEffect3 {
+            position: absolute;
+            transform: translateY(-160%);
+          }
+        }
+        &_button {
+          margin: 0 auto;
+          @include classButtonLong();
+          width: 296px;
+          margin-bottom: 40px;
+          // padding: 0 36px 40px 36px;
+          span {
+            @include spanButton();
+          }
+        }
+      }
+      
+      &-item2 {
+        position: absolute;
+        width: calc((100% - 60px) / 3);
+        border: 1px solid #DEDEDE;
+        &_top {
+          height: 182px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 65px;
+          background-image: url('/images/background_item1.png');
+          &-standart {
+            margin-left: 10%;
+            font-family: 'work sans bold';
+            color: #fff;
+            font-weight: bold;
+            font-size: 17px;
+            text-transform: uppercase;
+            line-height: 26px;
+            letter-spacing: 0.08em;
+            display: flex;
+            gap: 62px;
+            span#specialSpan {
+              position: relative;
+              top: 85%;
+          }
+            &--count {
+              @include flexBox();
+              flex-direction: column;
+              gap: 3px;
+              padding: 25px 15px 12px 15px;
+              position: absolute;
+              right: 12%;
+              top: -15px;
+              background-color: $primay-color;
+              width: 37%;
+              height: 19%;
+              .wrap {
+                display: flex;
+                gap: 5px;
+                width: 108%;
+                span {
+                  font-family: 'font1';
+                  font-size: 25px;
+                  font-weight: normal;
+                }
+                div#hehe {
+                  overflow-y: hidden;
+                  height: 40px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                  position: absolute;
+                  padding-top: 6px;
+                  width: 100%;
+                  left: 6%;
+                  top: 22%;
+                  div#effect {
+                    display: flex;
+                    margin-bottom: 10px;
+                    gap: 2px;
+                    span#effect1 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0s;
+                    }
+                    span#effect2 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.15s;
+                    }
+                    span#effect3 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.3s;
+                    }
+                    span {
+                      font-size: 45px;
+                      font-family: 'font2';
+                      letter-spacing: 0px;
+                      font-weight: bold;
+                    }
+                  }
+                  div#cloneEffect {
+                    display: flex;
+                    margin-bottom: 10px;
+                    gap: 2px;
+                    span#cloneEffect1 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0s;
+                    }
+                    span#cloneEffect2 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.15s;
+                    }
+                    span#cloneEffect3 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.3s;
+                    }
+                    span {
+                      font-size: 45px;
+                      font-family: "font2";
+                      letter-spacing: 0px;
+                      font-weight: bold;
+                    }
+                  }
+              }
+              }
+              div#duration {
+                font-family: 'font3';
+                font-size: 15px;
+                font-weight: normal;
+                letter-spacing: 0px;
+                text-transform: none;
+                margin: 0 auto;
+                @include flexBox();
+                width: 100%;
+                position: relative;
+                top: 12%;
+              }
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 0;
+                height: 0;
+                border-bottom: 15px solid #AE741C;
+                border-right: 12px solid transparent;
+              }
+            }
+          }
+          &-objects {
+            width: max-content;
+            margin: 0 auto;
+            font-family: 'font3';
+            font-size: 16px;
+            color: #ffffff;
+            padding: 15px 33px 10px;
+            background-color: rgba(255, 255, 255, 0.11);
+          }
+        }
+        &_bot {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          padding: 2em 0 2em 2em;
+          gap: 1em;
+          font-size: 17px;
+          &-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            height: 100%;
+          }
+          &-checked--optional {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            p {
+              font-family: 'font2';
+            }
+          }
+        }
+        &:hover {
+          span#effect1, span#effect2, span#effect3 {
+            position: absolute;
+            transform: translateY(-160%);
+          }
+          span#cloneEffect1, span#cloneEffect2, span#cloneEffect3 {
+            position: absolute;
+            transform: translateY(-160%);
+          }
+        }
+        &_button {
+          margin: 0 auto;
+          @include classButtonLong();
+          width: 296px;
+          margin-bottom: 40px;
+          // padding: 0 36px 40px 36px;
+          span {
+            @include spanButton();
+          }
+        }
+      }
+
+      &-item3 {
+        position: absolute;
+        width: calc((100% - 60px) / 3);
+        right: 0;
+        border: 1px solid #DEDEDE;
+        &_top {
+          height: 182px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 65px;
+          background-image: url('/images/background_item1.png');
+          &-standart {
+            margin-left: 10%;
+            font-family: 'work sans bold';
+            color: #fff;
+            font-weight: bold;
+            font-size: 17px;
+            text-transform: uppercase;
+            line-height: 26px;
+            letter-spacing: 0.08em;
+            display: flex;
+            gap: 62px;
+            span#specialSpan {
+              position: relative;
+              top: 85%;
+          }
+            &--count {
+              @include flexBox();
+              flex-direction: column;
+              gap: 3px;
+              padding: 25px 15px 12px 15px;
+              position: absolute;
+              right: 12%;
+              top: -15px;
+              background-color: $primay-color;
+              width: 37%;
+              height: 19%;
+              .wrap {
+                display: flex;
+                gap: 5px;
+                width: 108%;
+                span {
+                  font-family: 'font1';
+                  font-size: 25px;
+                  font-weight: normal;
+                }
+                div#hehe {
+                  overflow-y: hidden;
+                  height: 40px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                  position: absolute;
+                  padding-top: 6px;
+                  width: 100%;
+                  left: 6%;
+                  top: 22%;
+                  div#effect {
+                    display: flex;
+                    margin-bottom: 10px;
+                    gap: 2px;
+                    span#effect1 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0s;
+                    }
+                    span#effect2 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.15s;
+                    }
+                    span#effect3 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.3s;
+                    }
+                    span {
+                      font-size: 45px;
+                      font-family: 'font2';
+                      letter-spacing: 0px;
+                      font-weight: bold;
+                    }
+                  }
+                  div#cloneEffect {
+                    display: flex;
+                    margin-bottom: 10px;
+                    gap: 2px;
+                    span#cloneEffect1 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0s;
+                    }
+                    span#cloneEffect2 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.15s;
+                    }
+                    span#cloneEffect3 {
+                      transition: all 0.4s;
+                      position: relative;
+                      transition-delay: 0.3s;
+                    }
+                    span {
+                      font-size: 45px;
+                      font-family: "font2";
+                      letter-spacing: 0px;
+                      font-weight: bold;
+                    }
+                  }
+              }
+              }
+              div#duration {
+                font-family: 'font3';
+                font-size: 15px;
+                font-weight: normal;
+                letter-spacing: 0px;
+                text-transform: none;
+                margin: 0 auto;
+                @include flexBox();
+                width: 100%;
+                position: relative;
+                top: 12%;
+              }
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 0;
+                height: 0;
+                border-bottom: 15px solid #AE741C;
+                border-right: 12px solid transparent;
+              }
+            }
+          }
+          &-objects {
+            width: max-content;
+            margin: 0 auto;
+            font-family: 'font3';
+            font-size: 16px;
+            color: #ffffff;
+            padding: 15px 33px 10px;
+            background-color: rgba(255, 255, 255, 0.11);
+          }
+        }
+        &_bot {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          padding: 2em 0 2em 2em;
+          gap: 1em;
+          font-size: 17px;
+          &-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            height: 100%;
+          }
+          &-checked--optional {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            p {
+              font-family: 'font2';
+            }
+          }
+        }
+        &:hover {
+          span#effect1, span#effect2, span#effect3 {
+            position: absolute;
+            transform: translateY(-160%);
+          }
+          span#cloneEffect1, span#cloneEffect2, span#cloneEffect3 {
+            position: absolute;
+            transform: translateY(-160%);
+          }
+        }
+        &_button {
+          margin: 0 auto;
+          @include classButtonLong();
+          width: 296px;
+          margin-bottom: 40px;
+          // padding: 0 36px 40px 36px;
+          span {
+            @include spanButton();
+          }
+        }
+      }
+    }
+  }
+  .slide-testimonials {
+    position: absolute;
+    top: 114.5%;
+    width: 100%;
+    height: 20px;
+}
 }
