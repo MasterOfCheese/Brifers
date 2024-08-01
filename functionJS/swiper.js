@@ -15,14 +15,22 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
   },
-  pagination: {
-    // el: '.swiper-pagination',
-    // clickable: true,
-  },
-  // simulateTouch: true,
   speed: 970,
   touchAngle: 45,
   simulateTouch: true,
   touchRatio: 1.5,
   loop: true,
 })
+
+const partnersSwiper = new Swiper('.partners__swiper', {
+  slidesPerView: 10,
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  speed: 700,
+  touchAngle: 45,
+  simulateTouch: true,
+  touchRatio: 1.5,
+  loop: true,
+});

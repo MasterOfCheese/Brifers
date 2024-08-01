@@ -2364,5 +2364,38 @@ i.fa-solid.fa-chevron-down {
         font-family: 'Font Awesome 6 Free';
     }
     }
-}
+  }
+  .partners {
+    margin-bottom: 70px;
+    &__swiper {
+      width: 100%!important;
+      .swiper-wrapper {
+        height: 60px;
+        width: 150%!important;
+        @include flexBox();
+        justify-content: space-around;
+        margin-left: -10em;
+        gap: 4em;
+        .swiper-slide {
+          height: 100%!important;
+          width: 225px!important;
+          padding: 35px 40px;
+          @include flexBox();
+          transition: all 0.25s linear;
+          img {
+            width: 100%;
+            margin: 0 5px;
+            filter: grayscale(100%);
+            transition: filter 0.22s linear;
+            &:hover {
+              filter: grayscale(0%);
+            }
+          }
+          &:hover {
+            box-shadow: 0px 10px 15.2px 0.8px rgba(0, 0, 0, 0.13);
+          }
+        }
+      }
+    }
+  }
 }
