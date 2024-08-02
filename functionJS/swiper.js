@@ -24,10 +24,6 @@
 
 const partnersSwiper = new Swiper('.partners__swiper', {
   slidesPerView: 10,
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
   speed: 700,
   touchAngle: 45,
   simulateTouch: true,
