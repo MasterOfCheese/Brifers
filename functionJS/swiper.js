@@ -30,3 +30,22 @@ const partnersSwiper = new Swiper('.partners__swiper', {
   touchRatio: 1.5,
   loop: true,
 });
+
+const blogMain = new Swiper('.blog__swiper', {
+  slidesPerView: 3,
+  speed: 700,
+  touchAngle: 45,
+  touchRatio: 1.5,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+});
+
+const btnPrevNext = new Swiper('.btnPrevNext', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+});
