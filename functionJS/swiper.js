@@ -38,14 +38,26 @@ const blogMain = new Swiper('.blog__swiper', {
   touchRatio: 1.5,
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.blog-next',
+    prevEl: '.blog-prev',
 },
 });
 
-const btnPrevNext = new Swiper('.btnPrevNext', {
+// const btnPrevNext = new Swiper('.btnPrevNext', {
+//   navigation: {
+//     nextEl: '.blog-next',
+//     prevEl: '.blog-prev',
+// },
+// });
+
+const mapSwiper = new Swiper('.map__swiper', {
+  slidesPerView: 1,
+  speed: 700,
+  touchAngle: 45,
+  touchRatio: 1.5,
+  loop: false,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-},
+    nextEl: '.map-next',
+    prevEl: '.map-prev',
+  },
 });
