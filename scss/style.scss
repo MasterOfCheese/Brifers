@@ -2962,6 +2962,7 @@ i.fa-solid.fa-chevron-down {
   .map {
     width: 110%;
     margin-left: 3em;
+    margin-bottom: 8em;
     iframe {
       width: 112%;
       margin-left: -5em;
@@ -3074,6 +3075,7 @@ i.fa-solid.fa-chevron-down {
         width: 49px;
         height: 49px;
         background-color: white;
+        transition: all 0.2s linear;
         &::after {
           content: "\f104";
           font-size: 17px;
@@ -3081,8 +3083,11 @@ i.fa-solid.fa-chevron-down {
           font-family: "Font Awesome 6 Free";
           color: #333;
         }
-        .swiper-button-prev map-prev swiper-button-disabled {
-          background-color: white!important;
+        &:hover {
+        background-color: $primay-color;
+          &::after {
+            color: #fff;
+          }
         }
     }
       .swiper-button-next {
@@ -3093,6 +3098,7 @@ i.fa-solid.fa-chevron-down {
         width: 49px;
         height: 49px;
         background-color: white;
+        transition: all 0.2s linear;
         &::after {
           content: "\f105";
           font-size: 17px;
@@ -3100,7 +3106,97 @@ i.fa-solid.fa-chevron-down {
           font-family: "Font Awesome 6 Free";
           color: #333;
         }
+        &:hover {
+        background-color: $primay-color;
+          &::after {
+            color: #fff;
+          }
+        }
       }
     }
+  }
+}
+.footer {
+  width: 100%;
+  background-color: $background-color;
+  padding-top: 125px;
+  &__top {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    @include flexBox();
+    justify-content: space-between;
+    border-bottom: 1px solid #37424B;
+    padding-bottom: 60px;
+    &-content {
+      width: 66.67%;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      &--image {
+        width: 70px;
+        height: 70px;
+        padding: 15px;
+        background: $primay-color;
+        @include flexBox();
+        img {
+          width: 40px;
+          transition: all 0.25s linear;
+        }
+        &:hover {
+          img {
+            scale: 1.25;
+          }
+        }
+      }
+      &--text {
+        &_heading {
+          font-family: 'work sans bold';
+          font-size: 35px;
+          line-height: 55px;
+          color: #fff;
+          letter-spacing: 0.8px;
+          margin-bottom: 10px;
+          span {
+            color: $primay-color;
+          }
+        }
+        &_para {
+          font-family: 'font2';
+          color: $line-color;
+          font-size: 17px;
+          line-height: 28px;
+          letter-spacing: 0.1px;
+        }
+      }
+    }
+    &-button {
+      @include classButtonLong();
+      width: 15.33%;
+      a {
+        width: 100%;
+        .buttonLong {
+          span {
+            @include spanButton();
+            transition: all 0.25s linear;
+          }
+        }
+      }
+      &::after {
+        background-color: #fff;
+      }
+      &:hover {
+        a .buttonLong span {
+          color: $primay-color;
+        }
+      }
+    }
+  }
+  &__center {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-top: 60px;
   }
 }
