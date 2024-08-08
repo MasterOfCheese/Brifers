@@ -32,6 +32,9 @@ i.fa-solid.fa-chevron-down {
 }
 .wrapper {
   width: 100%;
+  @media only screen and (min-width:1500px) {
+    min-width: 1500px;
+  }
 }
 .shadowElement {
   margin-bottom: 0em;
@@ -47,13 +50,16 @@ i.fa-solid.fa-chevron-down {
     overflow: hidden;
       .swiper-slide {
         width: 100%;
-        height: 855px;
+        height: max-content;
         .bg-wrapper {
-            width: 100%;
-            position: relative;
-            display: flex;
-            height: 100%;
-              .slide-content {
+          width: 100%;
+          position: relative;
+          display: flex;
+          height: 100%;
+          align-items: center;
+          padding-bottom: 20%;
+          height: calc(max-content + 10em);
+            .slide-content {
                 position: absolute;
                 gap: 90%;
                 width: 100%;
@@ -80,6 +86,7 @@ i.fa-solid.fa-chevron-down {
               @include flexBox();
               flex-direction: column;
               gap: 1em;
+              transform: translateY(30%);
               &__text {
               @include flexBox();
               flex-direction: column;
@@ -219,12 +226,12 @@ i.fa-solid.fa-chevron-down {
         }
         .bg-wrapper .slide-img {
           width: 100%;
-          height: auto;
+          height: 100%;
           position: absolute;
           top: 0;
           left: 0;
           transform: translateX(100%);
-          transition: transform 2s ease-out, filter 2s ease-out; /* Transition for transform and filter */
+          transition: transform 2s ease-out, filter 2s ease-out;
         }
         .bg-wrapper .slide-img.active {
           // display: block;
@@ -234,35 +241,36 @@ i.fa-solid.fa-chevron-down {
     }
   }
 }
-.header__top {
-    max-width: 1520px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 4;
-    top: 1em;
-}
 .wrapper-header {
-  max-width: 1520px;
+  width: 100%;
   margin: 0 auto;
   position: sticky;
   z-index: 4;
   top: -1em;
 }
 .header {
-  max-width: 1520px;
+  width: 80%;
   margin: 0 auto;
   position: relative;
   z-index: 4;
   top: 1em;
+  display: flex;
+  justify-content: center;
   &__top {
-    padding: 0 50px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+    top: 1em;
+    padding: 0 10%;
     @include flexBox();
+    justify-content: space-between;
     margin-bottom: 24px;
     &-left {
       @include flexBox();
       justify-content: unset;
       gap: 22px;
-      width: 52%;
+      width: max-content;
       color: #fff;
       &-address {
         @include flexBox();
@@ -297,7 +305,7 @@ i.fa-solid.fa-chevron-down {
       }
     }
     &-right {
-      width: 55%;
+      width: max-content;
       &-socials {
         display: flex;
         width: 100%;
@@ -319,17 +327,32 @@ i.fa-solid.fa-chevron-down {
   &__bot {
     background-color: $background-color;
     display: flex;
-    padding: 0 50px;
     align-items: center;
-    position: sticky;
-    top: 2em;
+    width: 100%;
+    justify-content: space-between;
     &-logo {
-      width: 165px;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      min-height: 6.37em;
+      position: relative;
+      overflow: hidden;
+      a {
+        padding: 0 50px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        bottom: 0;
+        background-color: $primay-color;
+        transform: skewX(45deg) translateX(-100%);
+      }
     }
     &-list {
       display: flex;
-      margin-left: 75px;
-      gap: 40px;
       color: #fff;
       height: 95px;
       align-items: center;
@@ -338,6 +361,8 @@ i.fa-solid.fa-chevron-down {
         height: 95px;
         display: flex;
         align-items: center;
+        margin-right: 45px;
+        width: max-content;
         & ul{
           position: relative;
           font-family: 'font2';
@@ -519,8 +544,21 @@ i.fa-solid.fa-chevron-down {
     }
     &-items {
       @include flexBox();
-      margin-left: 230px;
       gap: 32px;
+      min-height: 6.37em;
+      overflow: hidden;
+      position: relative;
+      padding-right: 50px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        top: 0;
+        background-color: $primay-color;
+        transform: skewX(45deg) translateX(100%);
+      }
       &-search i {
         font-size: 18px;
         cursor: pointer;
@@ -1417,7 +1455,7 @@ i.fa-solid.fa-chevron-down {
     background-image: url(/images/background_projects.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 107%;
     position: absolute;
     margin-left: -30px;
     padding-top: 845px;
@@ -2407,7 +2445,7 @@ i.fa-solid.fa-chevron-down {
   .section2 {
     display: flex;
     width: 105%;
-    margin-left: -2em;
+    margin-left: -2%;
     &__contact {
       width: 32%;
       padding-left: 6.5%;
@@ -2577,10 +2615,13 @@ i.fa-solid.fa-chevron-down {
       width: 40%;
       padding-top: 82px;
       background-image: url('/images/backgroundContact2.png');
+      background-color: $primay-color;
       background-repeat: no-repeat;
       background-size: 100%;
       padding-left: 5%;
       padding-right: 6%;
+      background-position-x: 29em;
+      background-position-y: -11em;
       &-heading {
         font-family: 'font5';
         font-size: 25px;
@@ -2595,7 +2636,7 @@ i.fa-solid.fa-chevron-down {
           background-color: $background-color;
           border: none;
           outline: none;
-          width: 250px;
+          width: 47%;
           height: 45px;
           padding-left: 1em;
           margin-bottom: 40px;
@@ -2641,13 +2682,14 @@ i.fa-solid.fa-chevron-down {
         }
       }
       &-message {
+        width: 100%;
         textarea {
           background-color: $background-color;
           color: #fff;
           border: none;
           outline: none;
-          max-width: 100%;
           min-width: 100%;
+          max-width: 100%;
           min-height: 185px;
           padding-left: 1em;
           margin-bottom: 40px;
@@ -3510,6 +3552,31 @@ padding-top: 125px;
           }
         }
       }
+    }
+  }
+}
+.backToTop {
+  position: relative;
+  &::after {
+    position: fixed;
+    content: '\f176';
+    font-family: "Font Awesome 6 Free";
+    font-size: 15px;
+    font-weight: 700;
+    width: 50px;
+    color: #fff;
+    height: 50px;
+    background-color: $primay-color;
+    bottom: 5%;
+    right: 2%;
+    @include flexBox();
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+  }
+  &:hover {
+    &::after {
+      background-color: $background-color;
+      color: $primay-color;
     }
   }
 }
