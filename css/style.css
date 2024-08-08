@@ -88,6 +88,11 @@ i.fa-solid.fa-chevron-down {
 .wrapper {
   width: 100%;
 }
+@media only screen and (min-width: 1500px) {
+  .wrapper {
+    min-width: 1500px;
+  }
+}
 
 .shadowElement {
   margin-bottom: 0em;
@@ -106,13 +111,16 @@ i.fa-solid.fa-chevron-down {
 }
 .slider .swiper-wrapperr .swiper-slide {
   width: 100%;
-  height: 855px;
+  height: max-content;
 }
 .slider .swiper-wrapperr .swiper-slide .bg-wrapper {
   width: 100%;
   position: relative;
   display: flex;
   height: 100%;
+  align-items: center;
+  padding-bottom: 20%;
+  height: calc(max-content + 10em);
 }
 .slider .swiper-wrapperr .swiper-slide .bg-wrapper .slide-content {
   position: absolute;
@@ -147,6 +155,7 @@ i.fa-solid.fa-chevron-down {
   flex-wrap: nowrap;
   flex-direction: column;
   gap: 1em;
+  transform: translateY(30%);
 }
 .slider .swiper-wrapperr .swiper-slide .bg-wrapper .slide-title__text {
   display: flex;
@@ -297,28 +306,20 @@ i.fa-solid.fa-chevron-down {
 }
 .slider .swiper-wrapperr .swiper-slide .bg-wrapper .slide-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateX(100%);
-  transition: transform 2s ease-out, filter 2s ease-out; /* Transition for transform and filter */
+  transition: transform 2s ease-out, filter 2s ease-out;
 }
 .slider .swiper-wrapperr .swiper-slide .bg-wrapper .slide-img.active {
   filter: brightness(0.5);
   transform: translateX(0%);
 }
 
-.header__top {
-  max-width: 1520px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 4;
-  top: 1em;
-}
-
 .wrapper-header {
-  max-width: 1520px;
+  width: 100%;
   margin: 0 auto;
   position: sticky;
   z-index: 4;
@@ -326,18 +327,26 @@ i.fa-solid.fa-chevron-down {
 }
 
 .header {
-  max-width: 1520px;
+  width: 80%;
   margin: 0 auto;
   position: relative;
   z-index: 4;
   top: 1em;
+  display: flex;
+  justify-content: center;
 }
 .header__top {
-  padding: 0 50px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 4;
+  top: 1em;
+  padding: 0 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  justify-content: space-between;
   margin-bottom: 24px;
 }
 .header__top-left {
@@ -347,7 +356,7 @@ i.fa-solid.fa-chevron-down {
   flex-wrap: nowrap;
   justify-content: unset;
   gap: 22px;
-  width: 52%;
+  width: max-content;
   color: #fff;
 }
 .header__top-left-address {
@@ -391,7 +400,7 @@ i.fa-solid.fa-chevron-down {
   transition: 0.3s;
 }
 .header__top-right {
-  width: 55%;
+  width: max-content;
 }
 .header__top-right-socials {
   display: flex;
@@ -412,18 +421,33 @@ i.fa-solid.fa-chevron-down {
 .header__bot {
   background-color: #14212B;
   display: flex;
-  padding: 0 50px;
   align-items: center;
-  position: sticky;
-  top: 2em;
+  width: 100%;
+  justify-content: space-between;
 }
 .header__bot-logo {
-  width: 165px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  min-height: 6.37em;
+  position: relative;
+  overflow: hidden;
+}
+.header__bot-logo a {
+  padding: 0 50px;
+}
+.header__bot-logo::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  background-color: #d38e25;
+  transform: skewX(45deg) translateX(-100%);
 }
 .header__bot-list {
   display: flex;
-  margin-left: 75px;
-  gap: 40px;
   color: #fff;
   height: 95px;
   align-items: center;
@@ -433,6 +457,8 @@ i.fa-solid.fa-chevron-down {
   height: 95px;
   display: flex;
   align-items: center;
+  margin-right: 45px;
+  width: max-content;
 }
 .header__bot-list-item ul {
   position: relative;
@@ -621,8 +647,21 @@ i.fa-solid.fa-chevron-down {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin-left: 230px;
   gap: 32px;
+  min-height: 6.37em;
+  overflow: hidden;
+  position: relative;
+  padding-right: 50px;
+}
+.header__bot-items::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  background-color: #d38e25;
+  transform: skewX(45deg) translateX(100%);
 }
 .header__bot-items-search i {
   font-size: 18px;
@@ -1619,7 +1658,7 @@ i.fa-solid.fa-chevron-down {
   background-image: url(/images/background_projects.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 107%;
   position: absolute;
   margin-left: -30px;
   padding-top: 845px;
@@ -2716,7 +2755,7 @@ i.fa-solid.fa-chevron-down {
 .main .section2 {
   display: flex;
   width: 105%;
-  margin-left: -2em;
+  margin-left: -2%;
 }
 .main .section2__contact {
   width: 32%;
@@ -2893,10 +2932,13 @@ i.fa-solid.fa-chevron-down {
   width: 40%;
   padding-top: 82px;
   background-image: url("/images/backgroundContact2.png");
+  background-color: #d38e25;
   background-repeat: no-repeat;
   background-size: 100%;
   padding-left: 5%;
   padding-right: 6%;
+  background-position-x: 29em;
+  background-position-y: -11em;
 }
 .main .section2__form-heading {
   font-family: "font5";
@@ -2913,7 +2955,7 @@ i.fa-solid.fa-chevron-down {
   background-color: #14212B;
   border: none;
   outline: none;
-  width: 250px;
+  width: 47%;
   height: 45px;
   padding-left: 1em;
   margin-bottom: 40px;
@@ -2955,13 +2997,16 @@ i.fa-solid.fa-chevron-down {
   background-color: #fff;
   color: #14212B;
 }
+.main .section2__form-message {
+  width: 100%;
+}
 .main .section2__form-message textarea {
   background-color: #14212B;
   color: #fff;
   border: none;
   outline: none;
-  max-width: 100%;
   min-width: 100%;
+  max-width: 100%;
   min-height: 185px;
   padding-left: 1em;
   margin-bottom: 40px;
@@ -3907,6 +3952,33 @@ i.fa-solid.fa-chevron-down {
   border-radius: 50%;
   left: -14%;
   top: 50%;
+}
+
+.backToTop {
+  position: relative;
+}
+.backToTop::after {
+  position: fixed;
+  content: "\f176";
+  font-family: "Font Awesome 6 Free";
+  font-size: 15px;
+  font-weight: 700;
+  width: 50px;
+  color: #fff;
+  height: 50px;
+  background-color: #d38e25;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.backToTop:hover::after {
+  background-color: #14212B;
+  color: #d38e25;
 }
 
 /*# sourceMappingURL=style.css.map */
