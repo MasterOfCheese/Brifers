@@ -2,6 +2,17 @@
     pagination: false,
     slidesPerView: 3,
     spaceBetween: 30,
+    breakpoints: {
+      250: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3, //default in design
+      },
+    }
   })
   
 
@@ -41,6 +52,17 @@ const blogMain = new Swiper('.blog__swiper', {
     nextEl: '.blog-next',
     prevEl: '.blog-prev',
 },
+breakpoints: {
+  250: {
+    slidesPerView: 2,
+  },
+  992: {
+    slidesPerView: 2,
+  },
+  1200: {
+    slidesPerView: 3, //default in design
+  },
+}
 });
 
 // const btnPrevNext = new Swiper('.btnPrevNext', {
