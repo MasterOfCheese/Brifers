@@ -41,6 +41,9 @@ i.fa-solid.fa-chevron-down {
   box-shadow: -24px 70px 23em 151px rgb(0, 0, 0);
   position: relative;
   z-index: 1;
+  @media only screen and (min-width:992px) and (max-width: 1199px) {
+    margin-bottom: -15px;
+  }
 }
 .slider {
   position: relative;
@@ -77,6 +80,12 @@ i.fa-solid.fa-chevron-down {
                   transform: translateX(40px);
                   transition: opacity 0.5s ease, transform 0.5s ease;
                   }
+                @media only screen and (min-width:1200px) and (max-width: 1499px) {
+                  top: 50%;
+                }
+                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                  top: 53%;
+                }
             }
             .slide-title {
               position: relative;
@@ -222,6 +231,14 @@ i.fa-solid.fa-chevron-down {
               &:hover {
                 background-color: $primay-color;
               }
+              @media only screen and (min-width:1200px) and (max-width: 1499px) {
+                padding: 21.5px 21.5px;
+                margin: 0 -2%;
+              }
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                padding: 21.5px 21.5px;
+                margin: 0 -5%;
+              }
             }
         }
         .bg-wrapper .slide-img {
@@ -232,6 +249,7 @@ i.fa-solid.fa-chevron-down {
           left: 0;
           transform: translateX(100%);
           transition: transform 2s ease-out, filter 2s ease-out;
+          object-fit: cover;
         }
         .bg-wrapper .slide-img.active {
           // display: block;
@@ -246,7 +264,7 @@ i.fa-solid.fa-chevron-down {
   margin: 0 auto;
   position: sticky;
   z-index: 4;
-  top: -1em;
+  top: -16px;
 }
 .header {
   width: 80%;
@@ -323,6 +341,14 @@ i.fa-solid.fa-chevron-down {
         }
       }
     }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      padding: 0 4%;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      width: 90%;
+      margin-top: 16px;
+      padding: 0;
+    }
   }
   &__bot {
     background-color: $background-color;
@@ -339,6 +365,19 @@ i.fa-solid.fa-chevron-down {
       overflow: hidden;
       a {
         padding: 0 50px;
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          padding: 0 30px;
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          padding: 0;
+          width: 35%;
+        }
+        img#logo {
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            width: 100%;
+            padding-left: 1em;
+          }
+        }
       }
       &::before {
         content: '';
@@ -349,6 +388,9 @@ i.fa-solid.fa-chevron-down {
         bottom: 0;
         background-color: $primay-color;
         transform: skewX(45deg) translateX(-100%);
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        padding-left: 1em;
       }
     }
     &-list {
@@ -541,6 +583,9 @@ i.fa-solid.fa-chevron-down {
           font-size: 14px;
         }
       }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        display: none;
+      }
     }
     &-items {
       @include flexBox();
@@ -559,9 +604,17 @@ i.fa-solid.fa-chevron-down {
         background-color: $primay-color;
         transform: skewX(45deg) translateX(100%);
       }
-      &-search i {
-        font-size: 18px;
-        cursor: pointer;
+      &-search {
+        i {
+          font-size: 18px;
+          cursor: pointer;
+        }
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          margin-right: 15px;
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          display: none;
+        }
       }
       &-free {
         width: 205px;
@@ -621,6 +674,9 @@ i.fa-solid.fa-chevron-down {
             }
           }
         }
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          margin-right: 15px;
+        }
       }
       &-menu {
         width: 54px;
@@ -637,6 +693,9 @@ i.fa-solid.fa-chevron-down {
           transition: transform 0.35s ease, opacity 1s ease;
           &:not(:first-child) {
             margin-top: 5px;
+          }
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            background-color: #fefefe;
           }
         }
         &-line2 {
@@ -657,7 +716,19 @@ i.fa-solid.fa-chevron-down {
           }
         }
       }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+        gap: 0;
+      }
     }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      background-color: #fff;
+    }
+  }
+  @media only screen and (min-width:1200px) and (max-width: 1499px) {
+    width: 100%;
+  }
+  @media only screen and (min-width:992px) and (max-width: 1199px) {
+    width: 100%;
   }
 }
 .main {
@@ -670,6 +741,10 @@ i.fa-solid.fa-chevron-down {
     display: flex;
     width: 100%;
     gap: 2%;
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+    }
     &__item1, &__item2, &__item3, &__item4  {
       display: block;
       width: 24%;
@@ -747,6 +822,18 @@ i.fa-solid.fa-chevron-down {
             text-decoration: none;
           }
         }
+        @media only screen and (min-width:1500px)  {
+          height: 80%;
+        }
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          height: 83%;
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          height: 85%;
+        }
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 49%;
       }
     }
     &__item1:hover .services__item1-top--left img, 
@@ -860,6 +947,10 @@ i.fa-solid.fa-chevron-down {
           right: 12%;
           z-index: 1;
           user-select: none;
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            top: -80%;
+            right: 18%;
+          }
           &---count {
             font-family: 'work sans bold';
             font-size: 55px;
@@ -878,6 +969,9 @@ i.fa-solid.fa-chevron-down {
             height: 0;
             border-top: 15px solid $primay-color;
             border-left: 19px solid transparent;
+          }
+          @media only screen and (min-width:1200px) and (max-width: 1499px) {
+            right: 2%;
           }
         }
         &--play {
@@ -901,6 +995,10 @@ i.fa-solid.fa-chevron-down {
             }
           }
         }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: max-content;
+          margin: 0 auto;
+        }
       }
       &-content {
         margin-left: 70px;
@@ -910,6 +1008,12 @@ i.fa-solid.fa-chevron-down {
           @include classButtonShort();
           span {
             @include spanButton();
+          }
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            position: absolute;
+            width: 145px;
+            z-index: 1;
+            left: 83%;
           }
         }
         &--intro h4 {
@@ -931,6 +1035,9 @@ i.fa-solid.fa-chevron-down {
             top: 37%;
             position: absolute;
             left: 0;
+            @media only screen and (min-width:992px) and (max-width: 1199px) {
+              width: 80px;
+            }
           }
         }
         &--heading {
@@ -955,6 +1062,19 @@ i.fa-solid.fa-chevron-down {
           margin-bottom: 44px;
           color: #848484;
         }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          margin: 0;
+          transform: none;
+          position: relative;
+        }
+      }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+        width: 93%;
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 93%;
+        flex-direction: column;
+        margin-bottom: 30em;
       }
     }
     &__bot {
@@ -979,6 +1099,10 @@ i.fa-solid.fa-chevron-down {
         flex-direction: column;
         position: relative;
         z-index: 1;
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 35%;
+          align-items: normal;
+        }
         &--number {
           font-size: 55px;
           font-family: 'work sans bold';
@@ -986,6 +1110,12 @@ i.fa-solid.fa-chevron-down {
           padding: 0 33px 10px;
           border-bottom: 3px solid #333;
           margin-bottom: 33px;
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         &_text {
           font-family: 'font3';
           font-weight: 600;
@@ -993,6 +1123,12 @@ i.fa-solid.fa-chevron-down {
           font-size: 20px;
           line-height: 1.3;
           letter-spacing: 0.02em;
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
         &::after {
           content: '%';
@@ -1006,6 +1142,12 @@ i.fa-solid.fa-chevron-down {
             font-size: 43px;
           }
         }
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+        gap: 55px;
+        width: 100%;
+        justify-content: center;
       }
     }
   }
@@ -1148,6 +1290,10 @@ i.fa-solid.fa-chevron-down {
     position: relative;
     top: 45px;
     margin-bottom: 167px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
     &__main {
       width: max-content;
       &-image {
@@ -1177,6 +1323,12 @@ i.fa-solid.fa-chevron-down {
             &:hover + amen {
               top: -4.2%;
               left: -28%;
+              @media only screen and (min-width:1200px) and (max-width: 1499px) {
+                left: 2%;
+              }
+            }
+            @media only screen and (min-width:1200px) and (max-width: 1499px) {
+              left: 0%;
             }
           }
           amen {
@@ -1188,6 +1340,9 @@ i.fa-solid.fa-chevron-down {
             background-color: $primay-color;
             z-index: 0;
             transition: top 0.3s ease, left 0.25s ease;
+            @media only screen and (min-width:1200px) and (max-width: 1499px) {
+              left: 1%;
+            }
           }
           p {
             position: absolute;
@@ -1214,9 +1369,6 @@ i.fa-solid.fa-chevron-down {
     }
     &__title {
       width: min-content;
-      position: absolute;
-      top: 10%;
-      left: 51%;
       font-size: 15px;
       letter-spacing: 0.1em;
       padding-left: 1%;
@@ -1237,6 +1389,13 @@ i.fa-solid.fa-chevron-down {
           transform: skewX(-45deg);
           bottom: 45%;
           left: 0%;
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            width: 80px;
+          }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          padding-left: 19%;
+          font-size: 18px;
         }
       }
       &-heading {
@@ -1255,6 +1414,9 @@ i.fa-solid.fa-chevron-down {
         width: 114%;
         letter-spacing: 0.55px;
         margin-top: 2%;
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          max-width: 100%
+        }
       }
       &-checked {
         margin-top: 35px;
@@ -1284,7 +1446,17 @@ i.fa-solid.fa-chevron-down {
         span {
           @include spanButton();
         }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          left: 120%;
+        }
       }
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      max-width: 97%;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      flex-direction: column;
+      position: relative;
     }
   }
   .background-Wrapped--3 {
@@ -1303,6 +1475,8 @@ i.fa-solid.fa-chevron-down {
       overflow: hidden;
       img#scale1, img#scale2, img#scale3 {
         filter: brightness(0.5);
+        height: 100%;
+        object-fit: cover;
       }
       &-item {
         max-width: 70px;
@@ -1410,6 +1584,23 @@ i.fa-solid.fa-chevron-down {
       z-index: 1;
       height: max-content;
       right: 0;
+      a {
+        .buttonLong {
+          span {
+            @include spanButton;
+          }
+          @media only screen and (min-width:1200px) and (max-width: 1499px) {
+            display: flex;
+            justify-content: center;
+            width: max-content;
+          }
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            display: flex;
+            justify-content: center;
+            width: max-content;
+          }
+        }
+      }
       span {
         @include spanButton;
       }
@@ -1491,7 +1682,7 @@ i.fa-solid.fa-chevron-down {
         &__group {
           img {
             height: 560px;
-            object-fit: fill;
+            object-fit: cover;
             position: relative;
           }
           .non-act {
@@ -1706,6 +1897,9 @@ i.fa-solid.fa-chevron-down {
       gap: 30px;
       position: relative;
       margin-top: 2.2%;
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+      }
       &-item1 {
         position: relative;
         left: 0;
@@ -1733,6 +1927,9 @@ i.fa-solid.fa-chevron-down {
             span#specialSpan {
               position: relative;
               top: 85%;
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                font-size: 25px;
+              }
           }
             &--count {
               @include flexBox();
@@ -1745,6 +1942,9 @@ i.fa-solid.fa-chevron-down {
               background-color: $primay-color;
               width: 37%;
               height: 19%;
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                width: 34%;
+              }
               .wrap {
                 display: flex;
                 gap: 5px;
@@ -1831,6 +2031,9 @@ i.fa-solid.fa-chevron-down {
                 width: 100%;
                 position: relative;
                 top: 12%;
+                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                  font-size: 20px;
+                }
               }
               &::before {
                 content: '';
@@ -1896,6 +2099,9 @@ i.fa-solid.fa-chevron-down {
           span {
             @include spanButton();
           }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 46%;
         }
       }
       
@@ -1925,6 +2131,9 @@ i.fa-solid.fa-chevron-down {
             span#specialSpan {
               position: relative;
               top: 85%;
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                font-size: 25px;
+              }
           }
             &--count {
               @include flexBox();
@@ -1937,6 +2146,9 @@ i.fa-solid.fa-chevron-down {
               background-color: $primay-color;
               width: 37%;
               height: 19%;
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                width: 34%;
+              }
               .wrap {
                 display: flex;
                 gap: 5px;
@@ -2023,6 +2235,9 @@ i.fa-solid.fa-chevron-down {
                 width: 100%;
                 position: relative;
                 top: 12%;
+                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                  font-size: 20px;
+                }
               }
               &::before {
                 content: '';
@@ -2088,6 +2303,9 @@ i.fa-solid.fa-chevron-down {
           span {
             @include spanButton();
           }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 46%;
         }
       }
 
@@ -2118,6 +2336,9 @@ i.fa-solid.fa-chevron-down {
             span#specialSpan {
               position: relative;
               top: 85%;
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                font-size: 25px;
+              }
           }
             &--count {
               @include flexBox();
@@ -2130,6 +2351,9 @@ i.fa-solid.fa-chevron-down {
               background-color: $primay-color;
               width: 37%;
               height: 19%;
+              @media only screen and (min-width:992px) and (max-width: 1199px) {
+                width: 34%;
+              }
               .wrap {
                 display: flex;
                 gap: 5px;
@@ -2216,6 +2440,9 @@ i.fa-solid.fa-chevron-down {
                 width: 100%;
                 position: relative;
                 top: 12%;
+                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                  font-size: 20px;
+                }
               }
               &::before {
                 content: '';
@@ -2281,6 +2508,9 @@ i.fa-solid.fa-chevron-down {
           span {
             @include spanButton();
           }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 46%;
         }
       }
     }
@@ -2312,9 +2542,12 @@ i.fa-solid.fa-chevron-down {
       top: 120px;
       z-index: 2;
       overflow: hidden;
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        top: 78px;
+      }
       .swiper-wrapper {
         .swiper-slide {
-          width: 1160px !important;
+          width: 1160px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -2327,6 +2560,9 @@ i.fa-solid.fa-chevron-down {
             font-size: 17px;
             color: #ededed;
             line-height: 30px;
+            @media only screen and (min-width:992px) and (max-width: 1199px) {
+              max-width: 50%;
+            }
           }
           &__icon {
             width: 90px;
@@ -2355,6 +2591,9 @@ i.fa-solid.fa-chevron-down {
             line-height: 26px;
             color: #ffffff;
             font-style: italic;
+            @media only screen and (min-width:992px) and (max-width: 1199px) {
+              width: 44%;
+            }
           }
           &__vote {
             color: $primay-color;
@@ -2387,11 +2626,18 @@ i.fa-solid.fa-chevron-down {
       left: 21.5%;
       width: 70px;
       height: 70px;
+      z-index: 3;
       &::after {
         content: '\f104';
         font-size: 20px;
         font-weight: bold;
         font-family: 'Font Awesome 6 Free';
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      left: 24.5%;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      left: 27.5%;
     }
     }
     .swiper-button-next {
@@ -2401,28 +2647,35 @@ i.fa-solid.fa-chevron-down {
       right: 21.5%;
       width: 70px;
       height: 70px;
+      z-index: 3;
       &::after {
         content: '\f105';
         font-size: 20px;
         font-weight: bold;
         font-family: 'Font Awesome 6 Free';
     }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      right: 24.5%;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      right: 27.5%;
+    }
     }
   }
   .partners {
     margin-bottom: 70px;
     &__swiper {
-      width: 100%!important;
+      width: 100%;
       .swiper-wrapper {
         height: 60px;
-        width: 150%!important;
+        width: 150%;
         @include flexBox();
         justify-content: space-around;
         margin-left: -10em;
         gap: 4em;
         .swiper-slide {
-          height: 100%!important;
-          width: 225px!important;
+          height: 100%;
+          width: 225px;
           padding: 35px 40px;
           @include flexBox();
           transition: all 0.25s linear;
@@ -2434,10 +2687,30 @@ i.fa-solid.fa-chevron-down {
             &:hover {
               filter: grayscale(0%);
             }
+            @media only screen and (min-width:1200px) and (max-width: 1499px) {
+              width: 250%;
+            }
+            @media only screen and (min-width:992px) and (max-width: 1199px) {
+              width: 380%;
+              filter: none;
+            }
           }
           &:hover {
             box-shadow: 0px 10px 15.2px 0.8px rgba(0, 0, 0, 0.15);
           }
+          @media only screen and (min-width:1200px) and (max-width: 1499px) {
+            padding: 35px 32px;
+            margin-left: 1%;
+            margin-right: 1%;
+          }
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            padding: 35px 32px;
+            margin-left: 1%;
+            margin-right: 1%;
+          }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          gap: 2em;
         }
       }
     }
@@ -2529,6 +2802,12 @@ i.fa-solid.fa-chevron-down {
           }
         }
       }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+        width: 50%;
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 50%;
+      }
     }
     &__how {
       width: 35%;
@@ -2610,6 +2889,12 @@ i.fa-solid.fa-chevron-down {
           }
         }
       }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+        width: 50%;
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 50%;
+      }
     }
     &__form {
       width: 40%;
@@ -2654,6 +2939,12 @@ i.fa-solid.fa-chevron-down {
               color: $background-color;
             }
           }
+          @media only screen and (min-width:1200px) and (max-width: 1499px) {
+            width: 50%;
+          }
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            width: 50%;
+          }
         }
       }
       &-choose {
@@ -2679,6 +2970,9 @@ i.fa-solid.fa-chevron-down {
             background-color: #fff;
             color: $background-color;
           }
+        }
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          width: 100%;
         }
       }
       &-message {
@@ -2709,6 +3003,9 @@ i.fa-solid.fa-chevron-down {
             }
           }
         }
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          width: 100%;
+        }
       }
       &-submit {
         margin: 0 auto;
@@ -2727,6 +3024,14 @@ i.fa-solid.fa-chevron-down {
         &::after {
           background-color: green;
         }
+        @media only screen and (min-width:1200px) and (max-width: 1499px) {
+          width: 100%;
+          margin-bottom: 7em;
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 100%;
+          margin-bottom: 7em;
+        }
       }
       &-submit:hover {
         background-color: #9A9A9A;
@@ -2738,10 +3043,34 @@ i.fa-solid.fa-chevron-down {
           }
         }
       }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+        width: 100%;
+        background-size: 50%;
+        background-position-x: 60em;
+        background-position-y: -8em;
+        padding-right: 5%;
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 100%;
+        background-size: 50%;
+        background-position-x: 60em;
+        background-position-y: -8em;
+        padding-right: 5%;
+      }
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      width: 110%;
+      margin-left: -5%;
+      flex-wrap: wrap;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      width: 110%;
+      margin-left: -5%;
+      flex-wrap: wrap;
     }
   }
   .section3 {
-    width: 105%;
+    width: 110%;
     margin-left: -3em;
     margin-bottom: 120px;
     &__items {
@@ -2786,6 +3115,9 @@ i.fa-solid.fa-chevron-down {
             line-height: 26px;
             color: $secondary-color;
             font-weight: bold;
+            @media only screen and (min-width:1200px) and (max-width: 1499px) {
+              max-width: 84%;
+            }
           }
           &--button {
             margin: 0 auto;
@@ -2796,11 +3128,39 @@ i.fa-solid.fa-chevron-down {
               @include spanButton();
             }
           }
+          @media only screen and (min-width:1200px) and (max-width: 1499px) {
+            gap: 0;
+          }
         }
         &_image {
           width: 50%;
         }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 100%;
+          display: flex;
+        }
       }
+      &-item2 {
+        &_content {
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            order: 2;
+          }
+        }
+        &_image {
+          @media only screen and (min-width:992px) and (max-width: 1199px) {
+            order: 1;
+          }
+        }
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+      }
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      width: 107%;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      width: 108%;
     }
   }
   .blog {
@@ -2975,7 +3335,7 @@ i.fa-solid.fa-chevron-down {
         height: 50px;
         background: $primay-color;
         transition: all 0.2s linear;
-        z-index: 1!important;
+        z-index: 1;
         &::after {
           content: "\f104";
           font-size: 17px;
@@ -2993,7 +3353,7 @@ i.fa-solid.fa-chevron-down {
         height: 50px;
         background: $primay-color;
         transition: all 0.2s linear;
-        z-index: 1!important;
+        z-index: 1;
         &::after {
           content: "\f105";
           font-size: 17px;
@@ -3004,6 +3364,12 @@ i.fa-solid.fa-chevron-down {
         &:hover {
           background-color: #333;
         }  
+      }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+        width: 105%;
+      }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 105%;
       }
     }
   }
@@ -3117,7 +3483,7 @@ i.fa-solid.fa-chevron-down {
       .swiper-button-prev {
         top: 83%;
         left: 35.4%;
-        z-index: 1 !important;
+        z-index: 1;
         filter: none;
         width: 49px;
         height: 49px;
@@ -3140,7 +3506,7 @@ i.fa-solid.fa-chevron-down {
     .swiper-button-next {
       top: 83%;
       right: 35.4%;
-      z-index: 1 !important;
+      z-index: 1;
       filter: none;
       width: 49px;
       height: 49px;
@@ -3159,6 +3525,12 @@ i.fa-solid.fa-chevron-down {
           color: #fff;
         }
       }
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      transform: translate(-30em, 14%);
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      transform: translate(-22em, 14%);
     }
   }
 }
@@ -3217,6 +3589,9 @@ padding-top: 125px;
           letter-spacing: 0.1px;
         }
       }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: 70%;
+      }
     }
     &-button {
       @include classButtonLong();
@@ -3238,6 +3613,17 @@ padding-top: 125px;
           color: $primay-color;
         }
       }
+      @media only screen and (min-width:992px) and (max-width: 1199px) {
+        width: max-content;
+      }
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      padding: 0 35px;
+      padding-bottom: 55px;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      padding: 0 3em;
+      padding-bottom: 60px;
     }
   }
   &__center {
@@ -3286,6 +3672,13 @@ padding-top: 125px;
             border-right: 0;
           }
         }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 33%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
       }
       &-item2 {
         width: 25%;
@@ -3310,6 +3703,9 @@ padding-top: 125px;
                 align-items: start;
                 justify-content: left;
                 gap: 20px;
+                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                  align-items: center;
+                }
                 i {
                   color: $primay-color;
                 }
@@ -3320,6 +3716,9 @@ padding-top: 125px;
                   width: 70%;
                   display: inline-flex;
                   transition: all 0.25s linear;
+                  @media only screen and (min-width:992px) and (max-width: 1199px) {
+                    width: max-content;
+                  }
                 }
               }
               &:hover {
@@ -3329,6 +3728,13 @@ padding-top: 125px;
               }
             }
           }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 33%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
       }
       &-item3 {
@@ -3385,6 +3791,13 @@ padding-top: 125px;
               }
             }
           }
+        }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 33%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
       }
       &-item4 {
@@ -3468,7 +3881,24 @@ padding-top: 125px;
             }
           }
         }
+        @media only screen and (min-width:992px) and (max-width: 1199px) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 2em;
+        }
       }
+      @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      padding: 0 35px;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      width: 100%;
+    }
   }
   &__bot {
     padding: 30px 0;
@@ -3552,6 +3982,14 @@ padding-top: 125px;
           }
         }
       }
+    }
+    @media only screen and (min-width:1200px) and (max-width: 1499px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media only screen and (min-width:992px) and (max-width: 1199px) {
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 }
