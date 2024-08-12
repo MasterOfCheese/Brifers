@@ -44,6 +44,9 @@ i.fa-solid.fa-chevron-down {
   @media only screen and (min-width:992px) and (max-width: 1199px) {
     margin-bottom: -15px;
   }
+  @media only screen and (min-width:768px) and (max-width: 991px) {
+    margin-bottom: -60px;
+  }
 }
 .slider {
   position: relative;
@@ -83,7 +86,7 @@ i.fa-solid.fa-chevron-down {
                 @media only screen and (min-width:1200px) and (max-width: 1499px) {
                   top: 50%;
                 }
-                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                @media only screen and (min-width:768px) and (max-width: 1199px) {
                   top: 53%;
                 }
             }
@@ -223,6 +226,9 @@ i.fa-solid.fa-chevron-down {
                 position: relative;
                 z-index: 1;
               }
+              @media only screen and (min-width:768px) and (max-width: 991px) {
+                transform: translateY(20%);
+              }
             }
             .slide-content div {
               padding: 65px 21.5px;
@@ -235,7 +241,7 @@ i.fa-solid.fa-chevron-down {
                 padding: 21.5px 21.5px;
                 margin: 0 -2%;
               }
-              @media only screen and (min-width:992px) and (max-width: 1199px) {
+              @media only screen and (min-width:768px) and (max-width: 1199px) {
                 padding: 21.5px 21.5px;
                 margin: 0 -5%;
               }
@@ -324,11 +330,18 @@ i.fa-solid.fa-chevron-down {
     }
     &-right {
       width: max-content;
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        display: none;
+      }
       &-socials {
         display: flex;
         width: 100%;
         justify-content: right;
         gap: 18px;
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          justify-content: center;
+          gap: 5%;
+        }
         & div {
           padding: 0 5px;
           & i {
@@ -349,6 +362,13 @@ i.fa-solid.fa-chevron-down {
       margin-top: 16px;
       padding: 0;
     }
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      width: 90%;
+      margin-top: 65px;
+      padding: 0;
+      flex-direction: column;
+      gap: 12px;
+    }
   }
   &__bot {
     background-color: $background-color;
@@ -368,14 +388,15 @@ i.fa-solid.fa-chevron-down {
         @media only screen and (min-width:1200px) and (max-width: 1499px) {
           padding: 0 30px;
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           padding: 0;
           width: 35%;
         }
+        
         img#logo {
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             width: 100%;
-            padding-left: 1em;
+            transform: translateX(3em);
           }
         }
       }
@@ -583,7 +604,7 @@ i.fa-solid.fa-chevron-down {
           font-size: 14px;
         }
       }
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         display: none;
       }
     }
@@ -694,8 +715,8 @@ i.fa-solid.fa-chevron-down {
           &:not(:first-child) {
             margin-top: 5px;
           }
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
-            background-color: #fefefe;
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
+            background-color: $background-color;
           }
         }
         &-line2 {
@@ -723,12 +744,18 @@ i.fa-solid.fa-chevron-down {
     @media only screen and (min-width:992px) and (max-width: 1199px) {
       background-color: #fff;
     }
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      background-color: #fff;
+    }
   }
   @media only screen and (min-width:1200px) and (max-width: 1499px) {
     width: 100%;
   }
-  @media only screen and (min-width:992px) and (max-width: 1199px) {
+  @media only screen and (min-width:768px) and (max-width: 1199px) {
     width: 100%;
+  }
+  @media only screen and (min-width:768px) and (max-width: 991px) {
+    // transform: translateY(1em);
   }
 }
 .main {
@@ -836,6 +863,16 @@ i.fa-solid.fa-chevron-down {
         width: 49%;
       }
     }
+    &__item3, &__item4 {
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        display: none;
+      }
+    }
+  &__item1, &__item2 {
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      width: 50%;
+    }
+  }
     &__item1:hover .services__item1-top--left img, 
     &__item2:hover .services__item2-top--left img, 
     &__item3:hover .services__item3-top--left img, 
@@ -888,7 +925,6 @@ i.fa-solid.fa-chevron-down {
   .about {
     width: 100%;
     @include flexBox();
-    display: flex;
     flex-direction: column;
     margin-bottom: 120px;
     &__top {
@@ -994,10 +1030,15 @@ i.fa-solid.fa-chevron-down {
               font-size: 40px;
             }
           }
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
+            left: 79.5%;
+            top: 73.5%;
+          }
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           width: max-content;
           margin: 0 auto;
+          margin-bottom: -7em;
         }
       }
       &-content {
@@ -1076,6 +1117,11 @@ i.fa-solid.fa-chevron-down {
         flex-direction: column;
         margin-bottom: 30em;
       }
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        width: 93%;
+        flex-direction: column;
+        margin-bottom: 35em;
+      }
     }
     &__bot {
       width: 1090px;
@@ -1099,7 +1145,7 @@ i.fa-solid.fa-chevron-down {
         flex-direction: column;
         position: relative;
         z-index: 1;
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           width: 35%;
           align-items: normal;
         }
@@ -1110,7 +1156,7 @@ i.fa-solid.fa-chevron-down {
           padding: 0 33px 10px;
           border-bottom: 3px solid #333;
           margin-bottom: 33px;
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -1123,7 +1169,7 @@ i.fa-solid.fa-chevron-down {
           font-size: 20px;
           line-height: 1.3;
           letter-spacing: 0.02em;
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -1143,7 +1189,7 @@ i.fa-solid.fa-chevron-down {
           }
         }
       }
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         flex-wrap: wrap;
         gap: 55px;
         width: 100%;
@@ -1296,8 +1342,14 @@ i.fa-solid.fa-chevron-down {
     gap: 4em;
     &__main {
       width: max-content;
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        width: 100%;
+      }
       &-image {
         position: relative;
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          width: 100%;
+        }
         &::before {
           content: "";
           position: absolute;
@@ -1307,10 +1359,19 @@ i.fa-solid.fa-chevron-down {
           bottom: 3%;
           right: 3.5%;
           z-index: -1;
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            right: 1.5%;
+          }
         }
         img#mainImageSection1 {
           max-width: 541px;
           max-height: 634px;
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            max-width: none;
+          }
         }
         &--item {
           img#itemImageSection1  {
@@ -1326,9 +1387,16 @@ i.fa-solid.fa-chevron-down {
               @media only screen and (min-width:1200px) and (max-width: 1499px) {
                 left: 2%;
               }
+              @media only screen and (min-width:768px) and (max-width: 991px) {
+                top: -3.2%;
+                left: 2%;
+              }
             }
             @media only screen and (min-width:1200px) and (max-width: 1499px) {
               left: 0%;
+            }
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              left: 0;
             }
           }
           amen {
@@ -1341,6 +1409,9 @@ i.fa-solid.fa-chevron-down {
             z-index: 0;
             transition: top 0.3s ease, left 0.25s ease;
             @media only screen and (min-width:1200px) and (max-width: 1499px) {
+              left: 1%;
+            }
+            @media only screen and (min-width:768px) and (max-width: 991px) {
               left: 1%;
             }
           }
@@ -1372,6 +1443,9 @@ i.fa-solid.fa-chevron-down {
       font-size: 15px;
       letter-spacing: 0.1em;
       padding-left: 1%;
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        
+      }
       &-our {
         color: $primay-color;
         font-size: 15px;
@@ -1449,12 +1523,15 @@ i.fa-solid.fa-chevron-down {
         @media only screen and (min-width:992px) and (max-width: 1199px) {
           left: 120%;
         }
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          left: 87%;
+        }
       }
     }
     @media only screen and (min-width:1200px) and (max-width: 1499px) {
       max-width: 97%;
     }
-    @media only screen and (min-width:992px) and (max-width: 1199px) {
+    @media only screen and (min-width:768px) and (max-width: 1199px) {
       flex-direction: column;
       position: relative;
     }
@@ -1468,7 +1545,14 @@ i.fa-solid.fa-chevron-down {
     margin: 0 auto;
     gap: 2em;
     margin-bottom: 120px;
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
     &__pro1, &__pro2, &__pro3 {
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        max-width: 100%;
+      }
       max-width: 370px;
       max-height: 315px;
       position: relative;
@@ -1502,12 +1586,18 @@ i.fa-solid.fa-chevron-down {
           width: 60px;
           transform: translateY(-20px);
         }
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          left: 47%;
+        }
       }
       :hover + .projects__pro1-item,
       :hover + .projects__pro2-item,
       :hover + .projects__pro3-item {
         transform: translateY(200%);
         transition: all 0.35s;
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          transform: translateY(280%);
+        }
       }
       &-under {
           position: relative;
@@ -1522,6 +1612,9 @@ i.fa-solid.fa-chevron-down {
           bottom: 0;
           transition: all 0.9s linear;
           height: 110%;
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            height: 30.5em;
+          }
           p {
             @include flexBox();
             width: 100%;
@@ -1555,9 +1648,15 @@ i.fa-solid.fa-chevron-down {
         transform: translateY(-95%);
         background-color: $background-color;
         transition: all 0.5s;
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          transform: translateY(-180%);
+        }
         &::before {
           left: 90%;
           transition: all 0.8s linear;
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            left: 95%;
+          }
         }
         &::after {
           width: 100%;
@@ -1594,7 +1693,7 @@ i.fa-solid.fa-chevron-down {
             justify-content: center;
             width: max-content;
           }
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             display: flex;
             justify-content: center;
             width: max-content;
@@ -1603,6 +1702,9 @@ i.fa-solid.fa-chevron-down {
       }
       span {
         @include spanButton;
+      }
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
+        transform: translateY(1em);
       }
     }
     &__content {
@@ -1652,9 +1754,17 @@ i.fa-solid.fa-chevron-down {
     padding-top: 845px;
     z-index: -1;
     top: 12%;
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      width: 110%;
+      height: 75%;
+    }
   }
   .carousel {
     margin: 0 -475px 170px;
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      margin-left: -3%;
+      width: 106%;
+    }
     .swiper {
       &-slide {
         &:hover {
@@ -1684,6 +1794,9 @@ i.fa-solid.fa-chevron-down {
             height: 560px;
             object-fit: cover;
             position: relative;
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              object-fit: none;
+            }
           }
           .non-act {
             position: relative;
@@ -1700,6 +1813,9 @@ i.fa-solid.fa-chevron-down {
             overflow: hidden;
             transition: all 0.6s;
             transition-delay: 0.35s;
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              width: 90%;
+            }
             ::before {
               position: absolute;
               content: "";
@@ -1755,6 +1871,10 @@ i.fa-solid.fa-chevron-down {
             padding-top: 5%;
             overflow: hidden;
             transition: all 0.5s;
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              width: 90%;
+              padding-top: 20%;
+            }
             a#phuong {
               font-family: 'font5';
               font-size: 20px;
@@ -1897,8 +2017,9 @@ i.fa-solid.fa-chevron-down {
       gap: 30px;
       position: relative;
       margin-top: 2.2%;
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         flex-wrap: wrap;
+        gap: 4em;
       }
       &-item1 {
         position: relative;
@@ -1906,6 +2027,9 @@ i.fa-solid.fa-chevron-down {
         width: calc((100% - 60px) / 3);
         border: 1px solid #DEDEDE;
         transition: all 500ms ease 0s;
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
+          width: 100%;
+        }
         &_top {
           height: 182px;
           display: flex;
@@ -1924,6 +2048,9 @@ i.fa-solid.fa-chevron-down {
             letter-spacing: 0.08em;
             display: flex;
             gap: 62px;
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              margin-left: 5%;
+            }
             span#specialSpan {
               position: relative;
               top: 85%;
@@ -1942,8 +2069,9 @@ i.fa-solid.fa-chevron-down {
               background-color: $primay-color;
               width: 37%;
               height: 19%;
-              @media only screen and (min-width:992px) and (max-width: 1199px) {
-                width: 34%;
+              @media only screen and (min-width:768px) and (max-width: 1199px) {
+                width: 9em;
+                right: 5%;
               }
               .wrap {
                 display: flex;
@@ -2055,6 +2183,10 @@ i.fa-solid.fa-chevron-down {
             color: #ffffff;
             padding: 15px 33px 10px;
             background-color: rgba(255, 255, 255, 0.11);
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              width: 90%;
+              @include flexBox();
+            }
           }
         }
         &_bot {
@@ -2098,6 +2230,9 @@ i.fa-solid.fa-chevron-down {
           // padding: 0 36px 40px 36px;
           span {
             @include spanButton();
+          }
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            width: 90%;
           }
         }
         @media only screen and (min-width:992px) and (max-width: 1199px) {
@@ -2110,6 +2245,9 @@ i.fa-solid.fa-chevron-down {
         width: calc((100% - 60px) / 3);
         border: 1px solid #DEDEDE;
         transition: all 500ms ease 0s;
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
+          width: 100%;
+        }
         &_top {
           height: 182px;
           display: flex;
@@ -2128,6 +2266,9 @@ i.fa-solid.fa-chevron-down {
             letter-spacing: 0.08em;
             display: flex;
             gap: 62px;
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              margin-left: 5%;
+            }
             span#specialSpan {
               position: relative;
               top: 85%;
@@ -2146,8 +2287,9 @@ i.fa-solid.fa-chevron-down {
               background-color: $primay-color;
               width: 37%;
               height: 19%;
-              @media only screen and (min-width:992px) and (max-width: 1199px) {
-                width: 34%;
+              @media only screen and (min-width:768px) and (max-width: 1199px) {
+                width: 9em;
+                right: 5%;
               }
               .wrap {
                 display: flex;
@@ -2259,6 +2401,10 @@ i.fa-solid.fa-chevron-down {
             color: #ffffff;
             padding: 15px 33px 10px;
             background-color: rgba(255, 255, 255, 0.11);
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              width: 90%;
+              @include flexBox();
+            }
           }
         }
         &_bot {
@@ -2302,6 +2448,9 @@ i.fa-solid.fa-chevron-down {
           // padding: 0 36px 40px 36px;
           span {
             @include spanButton();
+          }
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            width: 90%;
           }
         }
         @media only screen and (min-width:992px) and (max-width: 1199px) {
@@ -2315,6 +2464,9 @@ i.fa-solid.fa-chevron-down {
         right: 0;
         border: 1px solid #DEDEDE;
         transition: all 500ms ease 0s;
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
+          width: 100%;
+        }
         &_top {
           height: 182px;
           display: flex;
@@ -2333,6 +2485,9 @@ i.fa-solid.fa-chevron-down {
             letter-spacing: 0.08em;
             display: flex;
             gap: 62px;
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              margin-left: 5%;
+            }
             span#specialSpan {
               position: relative;
               top: 85%;
@@ -2351,8 +2506,9 @@ i.fa-solid.fa-chevron-down {
               background-color: $primay-color;
               width: 37%;
               height: 19%;
-              @media only screen and (min-width:992px) and (max-width: 1199px) {
-                width: 34%;
+              @media only screen and (min-width:768px) and (max-width: 1199px) {
+                width: 9em;
+                right: 5%;
               }
               .wrap {
                 display: flex;
@@ -2464,6 +2620,10 @@ i.fa-solid.fa-chevron-down {
             color: #ffffff;
             padding: 15px 33px 10px;
             background-color: rgba(255, 255, 255, 0.11);
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              width: 90%;
+              @include flexBox();
+            }
           }
         }
         &_bot {
@@ -2507,6 +2667,9 @@ i.fa-solid.fa-chevron-down {
           // padding: 0 36px 40px 36px;
           span {
             @include spanButton();
+          }
+          @media only screen and (min-width:768px) and (max-width: 991px) {
+            width: 90%;
           }
         }
         @media only screen and (min-width:992px) and (max-width: 1199px) {
@@ -2639,6 +2802,9 @@ i.fa-solid.fa-chevron-down {
     @media only screen and (min-width:992px) and (max-width: 1199px) {
       left: 27.5%;
     }
+    @media only screen and (min-width:200px) and (max-width: 991px) {
+      display: none;
+    }
     }
     .swiper-button-next {
       color: #333;
@@ -2659,6 +2825,9 @@ i.fa-solid.fa-chevron-down {
     }
     @media only screen and (min-width:992px) and (max-width: 1199px) {
       right: 27.5%;
+    }
+    @media only screen and (min-width:200px) and (max-width: 991px) {
+      display: none;
     }
     }
   }
@@ -2690,8 +2859,8 @@ i.fa-solid.fa-chevron-down {
             @media only screen and (min-width:1200px) and (max-width: 1499px) {
               width: 250%;
             }
-            @media only screen and (min-width:992px) and (max-width: 1199px) {
-              width: 380%;
+            @media only screen and (min-width:768px) and (max-width: 1199px) {
+              width: 6em;
               filter: none;
             }
           }
@@ -2703,13 +2872,13 @@ i.fa-solid.fa-chevron-down {
             margin-left: 1%;
             margin-right: 1%;
           }
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             padding: 35px 32px;
             margin-left: 1%;
             margin-right: 1%;
           }
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           gap: 2em;
         }
       }
@@ -2805,7 +2974,7 @@ i.fa-solid.fa-chevron-down {
       @media only screen and (min-width:1200px) and (max-width: 1499px) {
         width: 50%;
       }
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         width: 50%;
       }
     }
@@ -2892,8 +3061,9 @@ i.fa-solid.fa-chevron-down {
       @media only screen and (min-width:1200px) and (max-width: 1499px) {
         width: 50%;
       }
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         width: 50%;
+        padding-left: 2em;
       }
     }
     &__form {
@@ -2942,7 +3112,7 @@ i.fa-solid.fa-chevron-down {
           @media only screen and (min-width:1200px) and (max-width: 1499px) {
             width: 50%;
           }
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             width: 50%;
           }
         }
@@ -3028,7 +3198,7 @@ i.fa-solid.fa-chevron-down {
           width: 100%;
           margin-bottom: 7em;
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           width: 100%;
           margin-bottom: 7em;
         }
@@ -3050,7 +3220,7 @@ i.fa-solid.fa-chevron-down {
         background-position-y: -8em;
         padding-right: 5%;
       }
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         width: 100%;
         background-size: 50%;
         background-position-x: 60em;
@@ -3063,7 +3233,7 @@ i.fa-solid.fa-chevron-down {
       margin-left: -5%;
       flex-wrap: wrap;
     }
-    @media only screen and (min-width:992px) and (max-width: 1199px) {
+    @media only screen and (min-width:768px) and (max-width: 1199px) {
       width: 110%;
       margin-left: -5%;
       flex-wrap: wrap;
@@ -3100,6 +3270,9 @@ i.fa-solid.fa-chevron-down {
                 scale: 1.3;
               }
             }
+            @media only screen and (min-width:768px) and (max-width: 991px) {
+              display: none;
+            }
           }
           &--heading {
             font-family: 'work sans bold';
@@ -3135,24 +3308,24 @@ i.fa-solid.fa-chevron-down {
         &_image {
           width: 50%;
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           width: 100%;
           display: flex;
         }
       }
       &-item2 {
         &_content {
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             order: 2;
           }
         }
         &_image {
-          @media only screen and (min-width:992px) and (max-width: 1199px) {
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
             order: 1;
           }
         }
       }
-      @media only screen and (min-width:992px) and (max-width: 1199px) {
+      @media only screen and (min-width:768px) and (max-width: 1199px) {
         flex-wrap: wrap;
       }
     }
@@ -3161,6 +3334,9 @@ i.fa-solid.fa-chevron-down {
     }
     @media only screen and (min-width:992px) and (max-width: 1199px) {
       width: 108%;
+    }
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      width: 112%;
     }
   }
   .blog {
@@ -3371,17 +3547,27 @@ i.fa-solid.fa-chevron-down {
       @media only screen and (min-width:992px) and (max-width: 1199px) {
         width: 105%;
       }
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        display: none;
+      }
     }
   }
   .map {
     width: 110%;
     margin-left: 3em;
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      display: flex;
+      flex-direction: column;
+    }
     iframe {
       width: 112%;
       margin-left: -5em;
       filter: grayscale(100%);
       height: 570px;
       position: absolute;
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        position: relative;
+      }
     }
     &__swiper {
       position: relative;
@@ -3502,35 +3688,49 @@ i.fa-solid.fa-chevron-down {
             color: #fff;
           }
         }
-    }
-    .swiper-button-next {
-      top: 83%;
-      right: 35.4%;
-      z-index: 1;
-      filter: none;
-      width: 49px;
-      height: 49px;
-      background-color: white;
-      transition: all 0.2s linear;
-      &::after {
-        content: "\f105";
-        font-size: 17px;
-        font-weight: bold;
-        font-family: "Font Awesome 6 Free";
-        color: #333;
-      }
-      &:hover {
-      background-color: $primay-color;
-        &::after {
-          color: #fff;
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          top: 80%;
+          left: 42.4%;
         }
-      }
+    }
+      .swiper-button-next {
+        top: 83%;
+        right: 35.4%;
+        z-index: 1;
+        filter: none;
+        width: 49px;
+        height: 49px;
+        background-color: white;
+        transition: all 0.2s linear;
+        &::after {
+          content: "\f105";
+          font-size: 17px;
+          font-weight: bold;
+          font-family: "Font Awesome 6 Free";
+          color: #333;
+        }
+        &:hover {
+        background-color: $primay-color;
+          &::after {
+            color: #fff;
+          }
+        }
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          top: 80%;
+          right: 42.4%;
+        }
     }
     @media only screen and (min-width:1200px) and (max-width: 1499px) {
       transform: translate(-30em, 14%);
     }
     @media only screen and (min-width:992px) and (max-width: 1199px) {
       transform: translate(-22em, 14%);
+    }
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      width: 101%;
+      margin-left: -6em;
+      margin-bottom: 2em;
+      transform: none;
     }
   }
 }
@@ -3592,6 +3792,9 @@ padding-top: 125px;
       @media only screen and (min-width:992px) and (max-width: 1199px) {
         width: 70%;
       }
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        width: 100%;
+      }
     }
     &-button {
       @include classButtonLong();
@@ -3616,6 +3819,9 @@ padding-top: 125px;
       @media only screen and (min-width:992px) and (max-width: 1199px) {
         width: max-content;
       }
+      @media only screen and (min-width:768px) and (max-width: 991px) {
+        width: 90%;
+      }
     }
     @media only screen and (min-width:1200px) and (max-width: 1499px) {
       padding: 0 35px;
@@ -3624,6 +3830,11 @@ padding-top: 125px;
     @media only screen and (min-width:992px) and (max-width: 1199px) {
       padding: 0 3em;
       padding-bottom: 60px;
+    }
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
     }
   }
   &__center {
@@ -3672,7 +3883,7 @@ padding-top: 125px;
             border-right: 0;
           }
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           width: 33%;
           display: flex;
           flex-direction: column;
@@ -3703,7 +3914,7 @@ padding-top: 125px;
                 align-items: start;
                 justify-content: left;
                 gap: 20px;
-                @media only screen and (min-width:992px) and (max-width: 1199px) {
+                @media only screen and (min-width:768px) and (max-width: 1199px) {
                   align-items: center;
                 }
                 i {
@@ -3716,7 +3927,7 @@ padding-top: 125px;
                   width: 70%;
                   display: inline-flex;
                   transition: all 0.25s linear;
-                  @media only screen and (min-width:992px) and (max-width: 1199px) {
+                  @media only screen and (min-width:768px) and (max-width: 1199px) {
                     width: max-content;
                   }
                 }
@@ -3729,12 +3940,11 @@ padding-top: 125px;
             }
           }
         }
-        @media only screen and (min-width:992px) and (max-width: 1199px) {
+        @media only screen and (min-width:768px) and (max-width: 1199px) {
           width: 33%;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
         }
       }
       &-item3 {
@@ -3798,6 +4008,14 @@ padding-top: 125px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 2em;
         }
       }
       &-item4 {
@@ -3889,15 +4107,22 @@ padding-top: 125px;
           align-items: center;
           margin-top: 2em;
         }
+        @media only screen and (min-width:768px) and (max-width: 991px) {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
       }
       @media only screen and (min-width:1200px) and (max-width: 1499px) {
       padding: 0 35px;
     }
-    @media only screen and (min-width:992px) and (max-width: 1199px) {
+    @media only screen and (min-width:768px) and (max-width: 1199px) {
       flex-wrap: wrap;
       justify-content: center;
       padding: 0;
       width: 100%;
+      gap: 4em;
     }
   }
   &__bot {
@@ -3987,7 +4212,7 @@ padding-top: 125px;
       padding-left: 30px;
       padding-right: 30px;
     }
-    @media only screen and (min-width:992px) and (max-width: 1199px) {
+    @media only screen and (min-width:768px) and (max-width: 1199px) {
       padding-left: 30px;
       padding-right: 30px;
     }
