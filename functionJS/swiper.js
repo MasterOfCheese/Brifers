@@ -6,6 +6,10 @@
       250: {
         slidesPerView: 2,
       },
+      768: {
+        slidesPerView: 2,
+        loop: true,
+      },
       992: {
         slidesPerView: 2,
       },
@@ -54,6 +58,9 @@ const blogMain = new Swiper('.blog__swiper', {
 },
 breakpoints: {
   250: {
+    slidesPerView: 1,
+  },
+  768: {
     slidesPerView: 2,
   },
   992: {
