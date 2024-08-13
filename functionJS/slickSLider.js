@@ -34,6 +34,20 @@ $(document).ready(function(){
         }
       },
       {
+        breakpoint: 200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 766,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2
+        }
+      },
+      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,

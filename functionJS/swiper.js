@@ -4,7 +4,7 @@
     spaceBetween: 30,
     breakpoints: {
       250: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
