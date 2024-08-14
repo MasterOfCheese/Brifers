@@ -4854,8 +4854,9 @@ padding-top: 125px;
   height: 656px;
   position: fixed;
   top: 18%;
-  right: 2%;
-  background-color: $secondary-color;
+  // right: 2%;
+  right: -39%;
+  background-color: $line-color;
   z-index: 5;
   @include flexBox();
   flex-direction: column;
@@ -4864,5 +4865,147 @@ padding-top: 125px;
   gap: 2em;
   color: #333;
   font-family: 'font2';
-  // display: none;
+  opacity: 0;
+  transition: all 0.35s linear;
+  overflow: hidden;
+  &__active {
+    display: flex;
+    width: 28px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    scale: 1.5;
+    &-item1 {
+      width: 14px;
+      height: 1.5px;
+      background-color: $background-color;
+      position: relative;
+      left: 7px;
+      transform: rotate(45deg);
+      transition: all 0.15s linear;
+    }
+    &-item2 {
+      width: 14px;
+      height: 1.5px;
+      background-color: $background-color;
+      position: relative;
+      right: 7px;
+      transform: rotate(-45deg);
+      transition: all 0.15s linear;
+    }
+    &:hover {
+      .menuItem__active-item1 {
+        transform: none;
+      }
+  
+      .menuItem__active-item2 {
+        transform: none;
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #d38e25;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg) translateX(-70%);
+  }
+  @media only screen and (min-width:200px) and (max-width: 991px) {
+    display: none;
+  }
+}
+.menuItem.show {
+  opacity: 1;
+  right: 2%;
+  @media only screen and (min-width:200px) and (max-width: 991px) {
+    opacity: 0;
+  }
+}
+
+.menuItemClone {
+  width: 50%;
+  height: 656px;
+  position: fixed;
+  top: 0%;
+  // left: 0%;
+  left: -51%;
+  background-color: $line-color;
+  z-index: 5;
+  @include flexBox();
+  flex-direction: column;
+  text-align: center;
+  padding: 0 3em;
+  gap: 2em;
+  color: #333;
+  font-family: 'font2';
+  opacity: 0;
+  transition: all 0.35s linear;
+  overflow: hidden;
+  &__active {
+    display: flex;
+    width: 28px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    scale: 1.5;
+    &-item1 {
+      width: 14px;
+      height: 1.5px;
+      background-color: $background-color;
+      position: relative;
+      left: 7px;
+      transform: rotate(45deg);
+      transition: all 0.15s linear;
+    }
+    &-item2 {
+      width: 14px;
+      height: 1.5px;
+      background-color: $background-color;
+      position: relative;
+      right: 7px;
+      transform: rotate(-45deg);
+      transition: all 0.15s linear;
+    }
+    &:hover {
+      .menuItem__active-item1 {
+        transform: none;
+      }
+  
+      .menuItem__active-item2 {
+        transform: none;
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #d38e25;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg) translateX(-70%);
+  }
+  @media only screen and (min-width:992px) {
+    display: none;
+  }
+  @media only screen and (min-width:200px) and (max-width:575px) {
+    width: 100%;
+  }
+}
+.menuItemClone.show {
+  opacity: 1;
+  right: 2%;
+  @media only screen and (min-width:992px) {
+    opacity: 0;
+  }
 }
