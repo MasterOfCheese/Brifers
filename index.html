@@ -38,6 +38,7 @@
 
   <script src="functionJS/backToTop.js" defer></script>
   <script src="functionJS/changeLogoOnScreens.js" defer></script>
+  <script src="functionJS/showHideMenu.js" defer></script>
 </head>
   <body onload="onPageLoading()">
     <div class="wrapper">
@@ -160,7 +161,7 @@
               <div class="header__bot-items-free">
                 <a href="#">free consulting</a>
               </div>
-              <div class="header__bot-items-menu">
+              <div id="headerMenu" class="header__bot-items-menu">
                 <div class="header__bot-items-menu-line1"></div>
                 <div class="header__bot-items-menu-line2"></div>
                 <div class="header__bot-items-menu-line3"></div>
@@ -1263,7 +1264,11 @@
       </div>
       <div class="backToTop" onclick="topFunction()" id="myBtn"></div>
       
-      <div class="menuItem">
+      <div id="menuItem" class="menuItem">
+        <div id="activeHide" class="menuItem__active">
+          <div class="menuItem__active-item1"></div>
+          <div class="menuItem__active-item2"></div>
+        </div>
         <div class="menuItem__intro">
           <div class="menuItem__intro-brifers">Brifers Consulting</div>
           <div class="menuItem__intro-para">Lorem ipsum dolor sit amet consectetur, 
@@ -1292,6 +1297,48 @@
         <div class="menuItem__follow">
           <div class="menuItem__follow-followUs">follow us</div>
           <div class="menuItem__follow-icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-skype"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="menuItemClone" class="menuItemClone">
+        <div id="activeHideClone" class="menuItemClone__active">
+          <div class="menuItemClone__active-item1"></div>
+          <div class="menuItemClone__active-item2"></div>
+        </div>
+        <div class="menuItemClone__intro">
+          <div class="menuItemClone__intro-brifers">Brifers Consulting</div>
+          <div class="menuItemClone__intro-para">Lorem ipsum dolor sit amet consectetur, 
+            adipisicing elit. Eum quas nisi natus unde, aut accusantium sunt incidunt, 
+            reprehenderit, perspiciatis quis culpa.</div>
+        </div>
+        <div class="menuItemClone__contact">
+          <div class="menuItemClone__contact-contactUs">contact us</div>
+          <div class="menuItemClone__contact-items">
+            <ul>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email:<br>BriferConsulting@gmail.com</p>
+              </li>
+              <li>
+                <i class="fa-solid fa-globe"></i>
+                <p>Address:<br>37 San Fairport, NY 14450, New York City</p>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <p>Call Suport 24/7:<br><span>(888) 123 - 4567</span></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="menuItemClone__follow">
+          <div class="menuItemClone__follow-followUs">follow us</div>
+          <div class="menuItemClone__follow-icons">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-skype"></i>
