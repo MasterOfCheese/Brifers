@@ -44,13 +44,36 @@ const partnersSwiper = new Swiper('.partners__swiper', {
   simulateTouch: true,
   touchRatio: 1.5,
   loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+},
+  breakpoints: {
+    250: {
+      loop: true,
+      slidesPerView: 1,
+    },
+    565: {
+      slidesPerView: 1,
+      loop: true,
+    },
+    567: {
+      slidesPerView: 10,
+    }
+  }
 });
 
 const blogMain = new Swiper('.blog__swiper', {
   slidesPerView: 3,
-  speed: 700,
+  speed: 970,
   touchAngle: 45,
+  simulateTouch: true,
   touchRatio: 1.5,
+  freeMode: true,
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+},
   loop: true,
   navigation: {
     nextEl: '.blog-next',
