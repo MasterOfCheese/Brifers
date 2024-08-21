@@ -5902,6 +5902,19 @@ i.fa-solid.fa-chevron-down {
 .backToTop:hover::after {
   background-color: #14212B;
   color: #d38e25;
+  animation: toTopFromBottom 0.3s none;
+}
+@keyframes toTopFromBottom {
+  0% {
+    -webkit-transform: translateY(10%);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+  }
+  51% {
+    opacity: 1;
+  }
 }
 
 .menuItem {
